@@ -1,0 +1,9 @@
+author: JeremyRuston
+core-version: >=5.0.0
+dependents: 
+description: TiddlyWeb and TiddlySpace components
+list: readme
+plugin-type: plugin
+title: $:/plugins/tiddlywiki/tiddlyweb
+type: application/json
+version: 5.1.21

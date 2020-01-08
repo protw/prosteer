@@ -3,7 +3,7 @@ rem SETLOCAL
 
 SET TW_DIR="D:\boa_protw\wiki_bag\prosteer"
 SET TMP_DIR="D:\boa_protw\_tmp\tmp_tw"
-SET IMG_FILTER="[is[image]] -[[$:/boa/logo]] -[[$:/favicon.ico]]"
+SET IMG_FILTER="[is[image]] -[prefix[$:/]]"
 SET HTML_IMAGES_DIR="D:\boa_protw\wiki_bag\prosteer\docs\images"
 SET HTML_INDEX_FILE="D:\boa_protw\wiki_bag\prosteer\docs\index.html"
 

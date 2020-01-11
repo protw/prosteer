@@ -1,27 +1,31 @@
 created: 20200109183854433
-modified: 20200111203241453
+modified: 20200111220155575
 tags: Доповідь
 title: Складові ефективного проєктного середовища
+
+\define card(img,caption)
+<<image-card "img/$img$.svg" title:"$caption$" width:17% pos:"top" align:"left">>
+\end
 
 <style>
   .h5 {font-size:11.5pt;}
 </style>
 
-<<image-card "img/task-scheduling.svg" title:"Засоби планування завдань і ресурсів" width:17% pos:"top" align:"left">>
-<<image-card "img/bullhorn.svg" title:"Взаємодія у просторово розподіле-ній команді" width:17% pos:"top" align:"left">>
-<<image-card "img/seo-and-web.svg" title:"Нічого не загубити" width:17% pos:"top" align:"left">>
-<<image-card "img/bell.svg" title:"Нічого не пропустити" width:17% pos:"top" align:"left">>
-<<image-card "img/meter.svg" title:"Контроль використан-ня ресурсів і прогресу виконання" width:17% pos:"top" align:"left">>
+<<card task-scheduling "Засоби планування завдань і ресурсів">>
+<<card bullhorn "Взаємодія у просторово розподіле-ній команді">>
+<<card lock "Безпека даних і права доступу">>
+<<card seo-and-web "Нічого не загубити">>
+<<card bell "Нічого не пропустити">>
 
 <div style="clear:both;"/>
 
-<<image-card "img/portfolio.svg" title:"Управління портфелем проєктів" width:17% pos:"top" align:"left">>
-<<image-card "img/lock.svg" title:"Безпека даних і права доступу" width:17% pos:"top" align:"left">>
-<<image-card "img/files-and-folders.svg" title:"Файлові та інші ресурси даних" width:17% pos:"top" align:"left">>
-<<image-card "img/folder-management.svg" title:"Імпорт, експорт, синхроні-зація даних" width:17% pos:"top" align:"left">>
-<<image-card "img/ios.svg" title:"Кросплат-форменість" width:17% pos:"top" align:"left">>
+<<card meter "Контроль використан-ня ресурсів і прогресу виконання">>
+<<card portfolio "Управління портфелем проєктів">>
+<<card files-and-folders "Файлові та інші ресурси даних">>
+<<card folder-management "Імпорт, експорт, синхроні-зація даних">>
+<<card ios "Кросплат-форменість">>
 
 <div style="clear:both;"/>
 
-<<image-card "img/slipper.svg" title:"Зручність та інтуїтивність" width:17% pos:"top" align:"left">>
-<<image-card "img/spending.svg" title:"Витрати" width:17% pos:"top" align:"left">>
+<<card slipper "Зручність та інтуїтивність">>
+<<card spending "Витрати">>

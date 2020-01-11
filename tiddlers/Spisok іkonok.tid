@@ -1,0 +1,8 @@
+created: 20200111150251238
+modified: 20200111172329499
+tags: 
+title: Список іконок
+
+<$list filter="[prefix[img/]]" >
+<$link to=<<currentTiddler>> tooltip=<<currentTiddler>>><$macrocall $name="doc-svg" tiddler={{!!title}} /></$link>
+</$list>

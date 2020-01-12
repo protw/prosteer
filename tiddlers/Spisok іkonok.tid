@@ -1,8 +1,22 @@
 created: 20200111150251238
-modified: 20200111172329499
+modified: 20200112092133826
 tags: 
 title: Список іконок
 
-<$list filter="[prefix[img/]]" >
-<$link to=<<currentTiddler>> tooltip=<<currentTiddler>>><$macrocall $name="doc-svg" tiddler={{!!title}} /></$link>
+<style>
+.fit { object-fit:contain; }
+</style>
+
+!! Тідлери, що містять SVG-код 
+;без XML-заголовка і типу тідлера
+
+:<$list filter="[prefix[img/]] -[type[image/svg+xml]]" >
+<$link to=<<currentTiddler>> tooltip=<<currentTiddler>>>@@font-size:24pt; <$macrocall $name="doc-svg" tiddler=<<currentTiddler>>  color="blue"/>@@</$link>
+</$list>
+
+!! Тідлери, що є SVG-зображеннями 
+;є XML-заголовок і тип тідлера - image/svg+xml
+
+:<$list filter="[prefix[img/]] +[type[image/svg+xml]]" >
+<$link to=<<currentTiddler>> tooltip=<<currentTiddler>>><$image source=<<currentTiddler>> width="90px" height="100px" class="fit" /></$link>
 </$list>

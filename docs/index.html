@@ -194,6 +194,8 @@ Error message and password prompt
 
 <li>$:/plugins/kookma/utility/stylesheet/wikitext-macro</li>
 
+<li>$:/plugins/kookma/utility/viewtemplate/view-fields</li>
+
 <li>$:/plugins/tiddlywiki/highlight</li>
 
 <li>$:/SiteSubtitle</li>
@@ -9893,6 +9895,101 @@ viewBox=&quot;0 0 16909 16909&quot;
 <div created="20180909042646908" creator="Mohammad" modified="20200111160242395" modifier="Mohammad" tags="$:/tags/Stylesheet" title="$:/plugins/kookma/utility/stylesheet/wikitext-macro" type="text/css" revision="0" bag="default">
 <pre>.doc-example { margin: 1em 0; padding: 0.8em 0; } .doc-example:hover { background-color: #f7f7f9; } .doc-example ul { margin-bottom: 0; padding-bottom: 0; margin-top: 0.2em; } .doc-example pre:first-child { margin-top: 0; } .doc-example-result { border-left: 5px solid #bbb; border-right: 5px solid #bbb; margin-left: 0; margin-right: 0; padding: 0 10px; } .doc-example-result ul { margin-left: 0; padding-left: 10px; } .doc-example-result ol { margin-left: 0; padding-left: 20px; }</pre>
 </div>
+<div created="20181010162537613" creator="Mohammad" description="Toggle field handling in view mode" list-after="$:/core/ui/ViewTemplate/tags" modified="20200112092038423" modifier="Mohammad" tags="" title="$:/plugins/kookma/utility/viewtemplate/view-fields" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>\define lingo-base() $:/language/EditTemplate/
+\define config-title()
+$:/config/EditTemplateFields/Visibility/$(currentField)$
+\end
+
+\define config-filter()
+[[hide]] -[title{$(config-title)$}]
+\end
+
+\define new-field()
+&lt;$vars name={{$:/temp/newfieldname}}&gt;
+&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&lt;&lt;name&gt;&gt;&gt;
+&lt;$button&gt;
+&lt;$action-sendmessage $message=&quot;tm-add-field&quot;
+$name=&lt;&lt;name&gt;&gt;
+$value={{$:/temp/newfieldvalue}}/&gt;
+&lt;$action-deletetiddler $tiddler=&quot;$:/temp/newfieldname&quot;/&gt;
+&lt;$action-deletetiddler $tiddler=&quot;$:/temp/newfieldvalue&quot;/&gt;
+&lt;&lt;lingo Fields/Add/Button&gt;&gt;
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal type=&quot;match&quot; text=&quot;&quot; default=&lt;&lt;name&gt;&gt;&gt;
+&lt;$button&gt;
+&lt;&lt;lingo Fields/Add/Button&gt;&gt;
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;/$vars&gt;
+\end
+
+&lt;div class=&quot;tc-edit-fields&quot;&gt;
+&lt;table class=&quot;tc-edit-fields&quot;&gt;
+&lt;tbody&gt;
+&lt;$list filter=&quot;[all[current]fields[]] +[sort[title]]&quot; variable=&quot;currentField&quot;&gt;
+&lt;$list filter=&lt;&lt;config-filter&gt;&gt; variable=&quot;temp&quot;&gt;
+&lt;tr class=&quot;tc-edit-field&quot;&gt;
+&lt;td class=&quot;tc-edit-field-name&quot;&gt;
+&lt;$text text=&lt;&lt;currentField&gt;&gt;/&gt;:&lt;/td&gt;
+&lt;td class=&quot;tc-edit-field-value&quot;&gt;
+&lt;$edit-text tiddler=&lt;&lt;currentTiddler&gt;&gt; field=&lt;&lt;currentField&gt;&gt; placeholder={{$:/language/EditTemplate/Fields/Add/Value/Placeholder}}/&gt;
+&lt;/td&gt;
+&lt;td class=&quot;tc-edit-field-remove&quot;&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot; tooltip={{$:/language/EditTemplate/Field/Remove/Hint}} aria-label={{$:/language/EditTemplate/Field/Remove/Caption}}&gt;
+&lt;$action-deletefield $field=&lt;&lt;currentField&gt;&gt;/&gt;
+{{$:/core/images/delete-button}}
+&lt;/$button&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/$list&gt;
+&lt;/$list&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;$fieldmangler&gt;
+&lt;div class=&quot;tc-edit-field-add&quot;&gt;
+&lt;em class=&quot;tc-edit&quot;&gt;
+&lt;&lt;lingo Fields/Add/Prompt&gt;&gt;
+&lt;/em&gt;
+&lt;span class=&quot;tc-edit-field-add-name&quot;&gt;
+&lt;$edit-text tiddler=&quot;$:/temp/newfieldname&quot; tag=&quot;input&quot; default=&quot;&quot; placeholder={{$:/language/EditTemplate/Fields/Add/Name/Placeholder}} focusPopup=&lt;&lt;qualify &quot;$:/state/popup/field-dropdown&quot;&gt;&gt; class=&quot;tc-edit-texteditor tc-popup-handle&quot;/&gt;
+&lt;/span&gt;
+&lt;$button popup=&lt;&lt;qualify &quot;$:/state/popup/field-dropdown&quot;&gt;&gt; class=&quot;tc-btn-invisible tc-btn-dropdown&quot; tooltip={{$:/language/EditTemplate/Field/Dropdown/Hint}} aria-label={{$:/language/EditTemplate/Field/Dropdown/Caption}}&gt;{{$:/core/images/down-arrow}}&lt;/$button&gt;
+&lt;$reveal state=&lt;&lt;qualify &quot;$:/state/popup/field-dropdown&quot;&gt;&gt; type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot;&gt;
+&lt;div class=&quot;tc-block-dropdown tc-edit-type-dropdown&quot;&gt;
+&lt;$linkcatcher to=&quot;$:/temp/newfieldname&quot;&gt;
+&lt;div class=&quot;tc-dropdown-item&quot;&gt;
+&lt;&lt;lingo Fields/Add/Dropdown/User&gt;&gt;
+&lt;/div&gt;
+&lt;$list filter=&quot;[!is[shadow]!is[system]fields[]search:title{$:/temp/newfieldname}sort[]] -created -creator -draft.of -draft.title -modified -modifier -tags -text -title -type&quot;  variable=&quot;currentField&quot;&gt;
+&lt;$link to=&lt;&lt;currentField&gt;&gt;&gt;
+&lt;&lt;currentField&gt;&gt;
+&lt;/$link&gt;
+&lt;/$list&gt;
+&lt;div class=&quot;tc-dropdown-item&quot;&gt;
+&lt;&lt;lingo Fields/Add/Dropdown/System&gt;&gt;
+&lt;/div&gt;
+&lt;$list filter=&quot;[fields[]search:title{$:/temp/newfieldname}sort[]] -[!is[shadow]!is[system]fields[]]&quot; variable=&quot;currentField&quot;&gt;
+&lt;$link to=&lt;&lt;currentField&gt;&gt;&gt;
+&lt;&lt;currentField&gt;&gt;
+&lt;/$link&gt;
+&lt;/$list&gt;
+&lt;/$linkcatcher&gt;
+&lt;/div&gt;
+&lt;/$reveal&gt;
+&lt;span class=&quot;tc-edit-field-add-value&quot;&gt;
+&lt;$edit-text tiddler=&quot;$:/temp/newfieldvalue&quot; tag=&quot;input&quot; default=&quot;&quot; placeholder={{$:/language/EditTemplate/Fields/Add/Value/Placeholder}} class=&quot;tc-edit-texteditor&quot;/&gt;
+&lt;/span&gt;
+&lt;span class=&quot;tc-edit-field-add-button&quot;&gt;
+&lt;$macrocall $name=&quot;new-field&quot;/&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/$fieldmangler&gt;
+</pre>
+</div>
 <div author="JoaoBolila" core-version="&gt;=5.0.0" dependents="" description="Highlight.js: syntax highlighting" list="readme usage howto license" plugin-type="plugin" title="$:/plugins/tiddlywiki/highlight" type="application/json" version="5.1.21" revision="0" bag="default">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -10107,19 +10204,19 @@ viewBox=&quot;0 0 16909 16909&quot;
 <div created="20190716175121909" modified="20190716175123854" tags="" title="$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth" revision="0" bag="default">
 <pre>886px</pre>
 </div>
-<div _canonical_uri="./images/img%252Falarm-clock.svg" created="20200111174945740" modified="20200111182149992" title="img/alarm-clock.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Falarm-clock.svg" created="20200111174945740" modified="20200112085537788" svg="image" title="img/alarm-clock.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div created="20200111152601314" modified="20200111152621084" title="img/balance-scale.svg" revision="0" bag="default">
+<div created="20200111152601314" modified="20200112085552081" svg="script" title="img/balance-scale.svg" revision="0" bag="default">
 <pre>&lt;svg class=&quot;tc-image-balance-scale tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot; viewBox=&quot;0 0 640 512&quot;&gt;&lt;path d=&quot;M256 336h-.02c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0C-2.06 328.75.02 320.33.02 336H0c0 44.18 57.31 80 128 80s128-35.82 128-80zM128 176l72 144H56l72-144zm511.98 160c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0-87.12 174.26-85.04 165.84-85.04 181.51H384c0 44.18 57.31 80 128 80s128-35.82 128-80h-.02zM440 320l72-144 72 144H440zm88 128H352V153.25c23.51-10.29 41.16-31.48 46.39-57.25H528c8.84 0 16-7.16 16-16V48c0-8.84-7.16-16-16-16H383.64C369.04 12.68 346.09 0 320 0s-49.04 12.68-63.64 32H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h129.61c5.23 25.76 22.87 46.96 46.39 57.25V448H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z&quot;/&gt;&lt;/svg&gt;</pre>
 </div>
-<div _canonical_uri="./images/img%252Fbell.svg" created="20200111191811741" modified="20200111191815658" title="img/bell.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fbell.svg" created="20200111191811741" modified="20200112085607702" svg="image" title="img/bell.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div _canonical_uri="./images/img%252Fbriefcase.svg" created="20200111163006929" modified="20200111184030661" title="img/briefcase.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fbriefcase.svg" created="20200111163006929" modified="20200112085621733" svg="image" title="img/briefcase.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div created="20200111145713273" modified="20200111150048479" title="img/bulb-money-outline.svg" revision="0" bag="default">
+<div created="20200111145713273" modified="20200112085705047" svg="script" title="img/bulb-money-outline.svg" revision="0" bag="default">
 <pre>&lt;svg version=&quot;1.1&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot;
 	 viewBox=&quot;0 0 64 64&quot; enable-background=&quot;new 0 0 64 64&quot; xml:space=&quot;preserve&quot;&gt;
 &lt;g&gt;
@@ -10140,28 +10237,28 @@ viewBox=&quot;0 0 16909 16909&quot;
 &lt;/svg&gt;
 </pre>
 </div>
-<div _canonical_uri="./images/img%252Fbullhorn.svg" created="20200111184911999" modified="20200111184922450" title="img/bullhorn.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fbullhorn.svg" created="20200111184911999" modified="20200112085722616" svg="image" title="img/bullhorn.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div created="20200111160856712" modified="20200111161042239" title="img/drafting-compass.svg" revision="0" bag="default">
+<div created="20200111160856712" modified="20200112085755881" svg="script" title="img/drafting-compass.svg" revision="0" bag="default">
 <pre>&lt;svg  viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M457.01 344.42c-25.05 20.33-52.63 37.18-82.54 49.05l54.38 94.19 53.95 23.04c9.81 4.19 20.89-2.21 22.17-12.8l7.02-58.25-54.98-95.23zm42.49-94.56c4.86-7.67 1.89-17.99-6.05-22.39l-28.07-15.57c-7.48-4.15-16.61-1.46-21.26 5.72C403.01 281.15 332.25 320 256 320c-23.93 0-47.23-4.25-69.41-11.53l67.36-116.68c.7.02 1.34.21 2.04.21s1.35-.19 2.04-.21l51.09 88.5c31.23-8.96 59.56-25.75 82.61-48.92l-51.79-89.71C347.39 128.03 352 112.63 352 96c0-53.02-42.98-96-96-96s-96 42.98-96 96c0 16.63 4.61 32.03 12.05 45.66l-68.3 118.31c-12.55-11.61-23.96-24.59-33.68-39-4.79-7.1-13.97-9.62-21.38-5.33l-27.75 16.07c-7.85 4.54-10.63 14.9-5.64 22.47 15.57 23.64 34.69 44.21 55.98 62.02L0 439.66l7.02 58.25c1.28 10.59 12.36 16.99 22.17 12.8l53.95-23.04 70.8-122.63C186.13 377.28 220.62 384 256 384c99.05 0 190.88-51.01 243.5-134.14zM256 64c17.67 0 32 14.33 32 32s-14.33 32-32 32-32-14.33-32-32 14.33-32 32-32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;</pre>
 </div>
-<div created="20200111145547444" modified="20200111150106533" title="img/exclamation-triangle.svg" revision="0" bag="default">
+<div created="20200111145547444" modified="20200112085815657" svg="script" title="img/exclamation-triangle.svg" revision="0" bag="default">
 <pre>&lt;svg class=&quot;tc-image-exclamation-triangle tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot; viewBox=&quot;0 0 576 512&quot;&gt;&lt;path d=&quot;M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z&quot;/&gt;&lt;/svg&gt;</pre>
 </div>
-<div _canonical_uri="./images/img%252Ffiles-and-folders.svg" created="20200111193218796" modified="20200111193228212" title="img/files-and-folders.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Ffiles-and-folders.svg" created="20200111193218796" modified="20200112085832696" svg="image" title="img/files-and-folders.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div _canonical_uri="./images/img%252Ffolder-management.svg" created="20200111195029298" modified="20200111195055175" title="img/folder-management.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Ffolder-management.svg" created="20200111195029298" modified="20200112085852533" svg="image" title="img/folder-management.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div created="20200111151749083" modified="20200111155749469" title="img/hourglass-half.svg" revision="0" bag="default">
+<div created="20200111151749083" modified="20200112085905455" svg="script" title="img/hourglass-half.svg" revision="0" bag="default">
 <pre>&lt;svg class=&quot;tc-image-hourglass-half tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot; viewBox=&quot;0 0 384 512&quot;&gt;&lt;path d=&quot;M360 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24 0 90.965 51.016 167.734 120.842 192C75.016 280.266 24 357.035 24 448c-13.255 0-24 10.745-24 24v16c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24 0-90.965-51.016-167.734-120.842-192C308.984 231.734 360 154.965 360 64c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24zm-75.078 384H99.08c17.059-46.797 52.096-80 92.92-80 40.821 0 75.862 33.196 92.922 80zm.019-256H99.078C91.988 108.548 88 86.748 88 64h208c0 22.805-3.987 44.587-11.059 64z&quot;/&gt;&lt;/svg&gt;</pre>
 </div>
-<div _canonical_uri="./images/img%252Fios.svg" created="20200111195750224" modified="20200111195754703" title="img/ios.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fios.svg" created="20200111195750224" modified="20200112085924762" svg="image" title="img/ios.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div created="20200111145410016" modified="20200111150124453" title="img/key.svg" revision="0" bag="default">
+<div created="20200111145410016" modified="20200112085936948" svg="script" title="img/key.svg" revision="0" bag="default">
 <pre>&lt;svg version=&quot;1.1&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot;
 	 viewBox=&quot;0 0 512 512&quot; style=&quot;enable-background:new 0 0 512 512;&quot; xml:space=&quot;preserve&quot;&gt;
 &lt;g&gt;
@@ -10189,19 +10286,19 @@ viewBox=&quot;0 0 16909 16909&quot;
 &lt;/svg&gt;
 </pre>
 </div>
-<div created="20200111145504075" modified="20200111150138954" title="img/list-ol.svg" revision="0" bag="default">
+<div created="20200111145504075" modified="20200112085952086" svg="script" title="img/list-ol.svg" revision="0" bag="default">
 <pre>&lt;svg class=&quot;tc-image-list-ol tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M61.77 401l17.5-20.15a19.92 19.92 0 0 0 5.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h22.83a157.41 157.41 0 0 0-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33 0 15.94 2.44 15.94 9.09 0 4.72-4.2 8.22-14.36 8.22a41.54 41.54 0 0 1-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16 0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zM16 160h64a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H64V40a8 8 0 0 0-8-8H32a8 8 0 0 0-7.14 4.42l-8 16A8 8 0 0 0 24 64h8v64H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8zm-3.91 160H80a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44 0-29.06-25-39.56-44.47-39.56-21.36 0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44 0 0 1 9.46-3.84c3.33 0 9.28 1.56 9.28 8.75C51 248.19 0 257.31 0 304.59v4C0 316 5.08 320 12.09 320z&quot;/&gt;&lt;/svg&gt;</pre>
 </div>
-<div _canonical_uri="./images/img%252Flock.svg" created="20200111192510482" modified="20200111192513851" title="img/lock.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Flock.svg" created="20200111192510482" modified="20200112090010714" svg="image" title="img/lock.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div created="20200111151544518" modified="20200111151615463" title="img/medal.svg" revision="0" bag="default">
+<div created="20200111151544518" modified="20200112090025203" svg="script" title="img/medal.svg" revision="0" bag="default">
 <pre>&lt;svg class=&quot;tc-image-medal tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M223.75 130.75L154.62 15.54A31.997 31.997 0 0 0 127.18 0H16.03C3.08 0-4.5 14.57 2.92 25.18l111.27 158.96c29.72-27.77 67.52-46.83 109.56-53.39zM495.97 0H384.82c-11.24 0-21.66 5.9-27.44 15.54l-69.13 115.21c42.04 6.56 79.84 25.62 109.56 53.38L509.08 25.18C516.5 14.57 508.92 0 495.97 0zM256 160c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm92.52 157.26l-37.93 36.96 8.97 52.22c1.6 9.36-8.26 16.51-16.65 12.09L256 393.88l-46.9 24.65c-8.4 4.45-18.25-2.74-16.65-12.09l8.97-52.22-37.93-36.96c-6.82-6.64-3.05-18.23 6.35-19.59l52.43-7.64 23.43-47.52c2.11-4.28 6.19-6.39 10.28-6.39 4.11 0 8.22 2.14 10.33 6.39l23.43 47.52 52.43 7.64c9.4 1.36 13.17 12.95 6.35 19.59z&quot;/&gt;&lt;/svg&gt;</pre>
 </div>
-<div _canonical_uri="./images/img%252Fmeter.svg" created="20200111190937357" modified="20200111190942966" title="img/meter.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fmeter.svg" created="20200111190937357" modified="20200112090038950" svg="image" title="img/meter.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div created="20200111145635042" modified="20200111203756079" title="img/money.svg" revision="0" bag="default">
+<div created="20200111145635042" modified="20200112090153475" svg="script" title="img/money.svg" revision="0" bag="default">
 <pre>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;  x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 100 512 312&quot;&gt;
 &lt;defs&gt;&lt;style&gt;
 	.fil0{fill:green}
@@ -10221,28 +10318,28 @@ viewBox=&quot;0 0 16909 16909&quot;
 &lt;/svg&gt;
 </pre>
 </div>
-<div _canonical_uri="./images/img%252Fportfolio.svg" created="20200111191339361" modified="20200111191343784" title="img/portfolio.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fportfolio.svg" created="20200111191339361" modified="20200112090051820" svg="image" title="img/portfolio.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div _canonical_uri="./images/img%252Fseo-and-web.svg" created="20200111185959137" modified="20200111190019477" title="img/seo-and-web.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fseo-and-web.svg" created="20200111185959137" modified="20200112090101283" svg="image" title="img/seo-and-web.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div created="20200111153305510" modified="20200111153322630" title="img/sitemap.svg" revision="0" bag="default">
+<div created="20200111153305510" modified="20200112090317611" svg="script" title="img/sitemap.svg" revision="0" bag="default">
 <pre>&lt;svg class=&quot;tc-image-sitemap tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot; viewBox=&quot;0 0 640 512&quot;&gt;&lt;path d=&quot;M128 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h96c17.67 0 32-14.33 32-32v-96c0-17.67-14.33-32-32-32zm-24-80h192v48h48v-48h192v48h48v-57.59c0-21.17-17.23-38.41-38.41-38.41H344v-64h40c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32H256c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h40v64H94.41C73.23 224 56 241.23 56 262.41V320h48v-48zm264 80h-96c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h96c17.67 0 32-14.33 32-32v-96c0-17.67-14.33-32-32-32zm240 0h-96c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h96c17.67 0 32-14.33 32-32v-96c0-17.67-14.33-32-32-32z&quot;/&gt;&lt;/svg&gt;</pre>
 </div>
-<div _canonical_uri="./images/img%252Fslipper.svg" created="20200111200734323" modified="20200111200737920" title="img/slipper.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fslipper.svg" created="20200111200734323" modified="20200112090118199" svg="image" title="img/slipper.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div _canonical_uri="./images/img%252Fspending.svg" created="20200111201920337" modified="20200111201924837" title="img/spending.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fspending.svg" created="20200111201920337" modified="20200112090127885" svg="image" title="img/spending.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
 <div _canonical_uri="./images/img%252Ftask-scheduling.svg" created="20200111185325841" modified="20200111185332582" title="img/task-scheduling.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div _canonical_uri="./images/img%252Ftasks.svg" created="20200111182840898" modified="20200111183104609" title="img/tasks.svg" type="image/svg+xml" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Ftasks.svg" created="20200111182840898" modified="20200112090137243" svg="image" title="img/tasks.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div created="20200111145326572" modified="20200111150207246" title="img/text-width.svg" revision="0" bag="default">
+<div created="20200111145326572" modified="20200112090254935" svg="script" title="img/text-width.svg" revision="0" bag="default">
 <pre>&lt;svg class=&quot;tc-image-text-width tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot; viewBox=&quot;0 0 448 512&quot;&gt;&lt;path d=&quot;M432 32H16A16 16 0 0 0 0 48v80a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16v-16h120v112h-24a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16h-24V112h120v16a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zm-68.69 260.69C354 283.36 336 288.36 336 304v48H112v-48c0-14.31-17.31-21.32-27.31-11.31l-80 80a16 16 0 0 0 0 22.62l80 80C94 484.64 112 479.64 112 464v-48h224v48c0 14.31 17.31 21.33 27.31 11.31l80-80a16 16 0 0 0 0-22.62z&quot;/&gt;&lt;/svg&gt;</pre>
 </div>
 <div created="20200111145828114" modified="20200111150220616" title="img/upward-trend-outline.svg" revision="0" bag="default">
@@ -10308,7 +10405,7 @@ Freedcamp – це сучасна багатофункціональна веб-
 [img width=80% [NAU-Prosteer-logo.png]]
 &lt;/center&gt;&lt;/a&gt;</pre>
 </div>
-<div created="20200109183854433" modified="20200112083211224" tags="Доповідь" title="Складові ефективного проєктного середовища" revision="0" bag="default">
+<div created="20200109183854433" modified="20200112084426673" tags="Доповідь" title="Складові ефективного проєктного середовища" revision="0" bag="default">
 <pre>\define card(img,caption)
 &lt;&lt;image-card &quot;img/$img$.svg&quot; title:&quot;$caption$&quot; width:136px pos:&quot;top&quot; align:&quot;left&quot;&gt;&gt;
 \end
@@ -10317,29 +10414,43 @@ Freedcamp – це сучасна багатофункціональна веб-
   .h5 {font-size:11.5pt;}
 &lt;/style&gt;
 
-&lt;&lt;card lock &quot;Структура прав доступу і безпека даних&quot;&gt;&gt;
-&lt;&lt;card task-scheduling &quot;Засоби планування завдань і ресурсів&quot;&gt;&gt;
-&lt;&lt;card bullhorn &quot;Взаємодія у просторово розподіле-ній команді&quot;&gt;&gt;
-&lt;&lt;card seo-and-web &quot;Нічого не загубити&quot;&gt;&gt;
-&lt;&lt;card bell &quot;Нічого не пропустити&quot;&gt;&gt;
+&lt;&lt;card lock &quot;Структура прав досту-пу і безпека даних&quot;&gt;&gt;
+&lt;&lt;card task-scheduling &quot;Засоби планування завдань і ресурсів&lt;br/&gt;&quot;&gt;&gt;
+&lt;&lt;card bullhorn &quot;Взаємодія у просторово розподіле-ній команді&lt;br/&gt;&quot;&gt;&gt;
+&lt;&lt;card seo-and-web &quot;Нічого не загубити&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&quot;&gt;&gt;
+&lt;&lt;card bell &quot;Нічого не пропустити&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&quot;&gt;&gt;
 
 &lt;div style=&quot;clear:both;&quot;/&gt;
 
-&lt;&lt;card files-and-folders &quot;Файлові та інші ресурси даних&quot;&gt;&gt;
-&lt;&lt;card folder-management &quot;Імпорт, експорт, синхроні-зація даних&quot;&gt;&gt;
+&lt;&lt;card files-and-folders &quot;Файлові та інші ресурси даних&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&quot;&gt;&gt;
+&lt;&lt;card folder-management &quot;Імпорт, експорт, синхроні-зація даних&lt;br/&gt;&lt;br/&gt;&quot;&gt;&gt;
 &lt;&lt;card meter &quot;Контроль використа-ння ресурсів і прогресу виконання&quot;&gt;&gt;
-&lt;&lt;card portfolio &quot;Управління портфелем проєктів&quot;&gt;&gt;
+&lt;&lt;card portfolio &quot;Управління портфелем проєктів&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&quot;&gt;&gt;
 
 &lt;div style=&quot;clear:both;&quot;/&gt;
 
 &lt;&lt;card ios &quot;Кросплат-форменість&quot;&gt;&gt;
 &lt;&lt;card slipper &quot;Зручність та інтуїтивність&quot;&gt;&gt;
-&lt;&lt;card spending &quot;Витрати&quot;&gt;&gt;
+&lt;&lt;card spending &quot;Витрати&lt;br/&gt;&quot;&gt;&gt;
 </pre>
 </div>
-<div created="20200111150251238" modified="20200111172329499" tags="" title="Список іконок" revision="0" bag="default">
-<pre>&lt;$list filter=&quot;[prefix[img/]]&quot; &gt;
-&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; tooltip=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;$macrocall $name=&quot;doc-svg&quot; tiddler={{!!title}} /&gt;&lt;/$link&gt;
+<div created="20200111150251238" modified="20200112092133826" tags="" title="Список іконок" revision="0" bag="default">
+<pre>&lt;style&gt;
+.fit { object-fit:contain; }
+&lt;/style&gt;
+
+!! Тідлери, що містять SVG-код 
+;без XML-заголовка і типу тідлера
+
+:&lt;$list filter=&quot;[prefix[img/]] -[type[image/svg+xml]]&quot; &gt;
+&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; tooltip=&lt;&lt;currentTiddler&gt;&gt;&gt;@@font-size:24pt; &lt;$macrocall $name=&quot;doc-svg&quot; tiddler=&lt;&lt;currentTiddler&gt;&gt;  color=&quot;blue&quot;/&gt;@@&lt;/$link&gt;
+&lt;/$list&gt;
+
+!! Тідлери, що є SVG-зображеннями 
+;є XML-заголовок і тип тідлера - image/svg+xml
+
+:&lt;$list filter=&quot;[prefix[img/]] +[type[image/svg+xml]]&quot; &gt;
+&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; tooltip=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;$image source=&lt;&lt;currentTiddler&gt;&gt; width=&quot;90px&quot; height=&quot;100px&quot; class=&quot;fit&quot; /&gt;&lt;/$link&gt;
 &lt;/$list&gt;</pre>
 </div>
 <div created="20200109211859624" modified="20200111215256767" tags="Доповідь" title="Що таке проєкт" revision="0" bag="default">

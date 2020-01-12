@@ -1,10 +1,10 @@
 created: 20200109183854433
-modified: 20200112064640861
+modified: 20200112083211224
 tags: Доповідь
 title: Складові ефективного проєктного середовища
 
 \define card(img,caption)
-<<image-card "img/$img$.svg" title:"$caption$" width:17% pos:"top" align:"left">>
+<<image-card "img/$img$.svg" title:"$caption$" width:136px pos:"top" align:"left">>
 \end
 
 <style>
@@ -21,7 +21,7 @@ title: Складові ефективного проєктного середо
 
 <<card files-and-folders "Файлові та інші ресурси даних">>
 <<card folder-management "Імпорт, експорт, синхроні-зація даних">>
-<<card meter "Контроль використан-ня ресурсів і прогресу виконання">>
+<<card meter "Контроль використа-ння ресурсів і прогресу виконання">>
 <<card portfolio "Управління портфелем проєктів">>
 
 <div style="clear:both;"/>

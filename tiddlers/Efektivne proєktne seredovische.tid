@@ -1,7 +1,8 @@
 created: 20200109183854433
-modified: 20200112123249668
-tags: Доповідь
-title: Складові ефективного проєктного середовища
+modified: 20200121135204114
+order: 015
+parent: Доповідь
+title: Ефективне проєктне середовище
 
 \define card(img,caption)
 <<image-card "img/$img$.svg" title:"$caption$" width:136px pos:"top" align:"left">>

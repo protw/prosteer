@@ -1,0 +1,8 @@
+created: 20200122074514370
+modified: 20200122074846399
+tags: $:/tags/Macro
+title: $:/boa/macro/signs
+
+\define i() <<doc-svg $:/boa/img/yes green>>
+\define o() <<doc-svg $:/boa/img/no red>>
+

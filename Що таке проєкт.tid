@@ -1,21 +1,29 @@
 created: 20200109211859624
-modified: 20200122195914277
+modified: 20200121132140797
 order: 010
 parent: Доповідь
 revision: 0
 title: Що таке проєкт
 
-\define bullet2(sign,color) <div style="width:50px;font-size:50pt;"><<doc-svg img/$sign$.svg $color$>></div>
+\define bullet(sign.color)
+<div style="clear:both;"/>
+<div style="float:left; font-size:20pt; padding-top:3px; padding-right:10px;">
+<<doc-svg img/$sign$.svg $color$>>
+</div>
+\end
 
-Розпочнімо із з'ясування власне ключового терміну - `проєкт`:
+\define bullet2(sign.color) <div style="width:50px;font-size:50pt;"><<doc-svg img/$sign$.svg $color$>></div>
+
+
+Розпочнімо із з'ясування власне терміну `проєкт`:
 
 ; Граматика
 : `проект` vs `проєкт`
-:&nbsp;
+<div style="clear:both;"/>
 
 ; Семантика
 : `design` vs `draft` vs `project`
-:&nbsp;
+<div style="clear:both;"/>
 
 ; Функціональне визначення
 

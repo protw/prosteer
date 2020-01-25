@@ -1,8 +1,8 @@
 color: #389cd8
 created: 20200125114736514
 icon: $:/boa/img/Доповідь
-modified: 20200125165719760
+modified: 20200125182826794
 tags: 
-title: Посібник із входження до проєктного простору НАУ
+title: Входження до проєктного простору НАУ
 
 <<tabs tabsList:"[parent[Доповідь]sort[order]]" default:"Проектне управління в НАУ" class:"tc-vertical">>

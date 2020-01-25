@@ -1,10 +1,12 @@
 caption: Вікі
 created: 20200122175922493
-modified: 20200122180006507
+modified: 20200125130936785
 order: 040
 parent: Права доступу
 tags: 
 title: Права доступу/Вікі
+
+<style> td {max-width:280px;}</style>
 
 |table-striped-row table-borderless|k
 |!№|!Роль|!Власник|!Адмін групи|!Адмін проекту|!Користу-вач-Про|!Корис-тувач|!Гість|!Спосте-рігач|

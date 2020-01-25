@@ -1,0 +1,8 @@
+color: #389cd8
+created: 20200125114736514
+icon: $:/boa/img/Доповідь
+modified: 20200125120902722
+tags: 
+title: Презентація курсу
+
+<<tabs tabsList:"[parent[Доповідь]sort[order]]" default:"Проектне управління в НАУ" class:"tc-vertical">>

@@ -1,34 +1,35 @@
+caption: Компоненти середовища
 created: 20200109183854433
-modified: 20200121135204114
+modified: 20200125121730156
 order: 015
 parent: Доповідь
 title: Ефективне проєктне середовище
 
 \define card(img,caption)
-<<image-card "img/$img$.svg" title:"$caption$" width:136px pos:"top" align:"left">>
+<<image-card "img/$img$.svg" title:"$caption$" width:15% pos:"top" align:"left">>
 \end
 
 <style>
-  .h5 {font-size:11.5pt;}
+  .h5 {font-size:10.8pt;}
 </style>
 
-<<card lock "Структура прав досту-пу і безпека даних">>
-<<card task-scheduling "Засоби планування завдань і ресурсів<br/>">>
-<<card bullhorn "Взаємодія у просторово розподіле-ній команді<br/>">>
+<<card lock "Структу&shy;ра прав досту&shy;пу і безпека даних">>
+<<card task-scheduling "Засоби плану&shy;вання завдань і ресурсів<br/>">>
+<<card bullhorn "Взаємо&shy;дія у про&shy;сто&shy;рово роз&shy;поді&shy;леній команді<br/>">>
 <<card seo-and-web "Нічого не загубити<br/><br/><br/>">>
-<<card bell "Нічого не пропустити<br/><br/><br/>">>
+<<card bell "Нічого не пропу&shy;стити<br/><br/><br/>">>
 
 <div style="clear:both;"/>
 
 <<card files-and-folders "Файлові та інші ресурси даних<br/><br/><br/>">>
-<<card folder-management "Імпорт, експорт, синхроні-зація даних<br/><br/>">>
-<<card meter "Контроль використа-ння ресурсів і прогресу виконання">>
-<<card portfolio "Управління портфелем проєктів<br/><br/><br/>">>
+<<card folder-management "Імпорт, екс&shy;порт, син&shy;хро&shy;ні&shy;за&shy;ція даних<br/><br/>">>
+<<card meter "Контроль ви&shy;ко&shy;ри&shy;ста&shy;ння ре&shy;сур&shy;сів і про&shy;гресу ви&shy;ко&shy;нання">>
+<<card portfolio "Управ&shy;ління порт&shy;фелем проєктів<br/><br/>">>
 
 <div style="clear:both;"/>
 
-<<card ios "Кросплат-форменість">>
-<<card slipper "Зручність та інтуїтивність">>
+<<card ios "Крос&shy;плат&shy;форме&shy;ність">>
+<<card slipper "Зручність та інтуїтив&shy;ність">>
 <<card spending "Витрати<br/><br/>">>
 
 <div style="clear:both;"/>

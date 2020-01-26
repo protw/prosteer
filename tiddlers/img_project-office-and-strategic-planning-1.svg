@@ -39,7 +39,7 @@
   <polygon fill="#5B9BD5" points="4060.53,6158.59 4060.53,6856.9 7215.54,6856.9 7215.54,6158.59 "/>
   <polygon fill="none" stroke="black" stroke-width="27.34" stroke-linecap="square" stroke-miterlimit="22.9256" points="4061.58,6159.64 7216.6,6159.64 7216.6,6857.95 4061.58,6857.95 "/>
   <g transform="matrix(0.999999 0 0 0.999999 -1075.06 2839.17)">
-   <text x="6085.25" y="3802.15"  fill="white" font-weight="bold" font-size="351.25px" font-family="Calibri">Проекти</text>
+   <text x="6085.25" y="3802.15"  fill="white" font-weight="bold" font-size="351.25px" font-family="Calibri">Проєкти</text>
   </g>
   <g transform="matrix(0.999999 0 0 0.999999 203.78 2839.17)">
    <text x="6085.25" y="3802.15"  fill="black" font-weight="normal" font-size="490.07px" font-family="Arial"> </text>

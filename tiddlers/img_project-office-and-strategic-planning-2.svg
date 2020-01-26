@@ -7,7 +7,7 @@
   <polygon fill="white" points="131.48,12.62 131.48,7426.91 11983.83,7426.91 11983.83,12.62 "/>
   <polygon fill="none" stroke="#41719C" stroke-width="27.34" stroke-linecap="square" stroke-miterlimit="22.9256" points="132.53,13.67 11984.88,13.67 11984.88,7427.96 132.53,7427.96 "/>
   <g transform="matrix(0.999999 0 0 0.999999 -5729.76 -3228.99)">
-   <text x="6085.25" y="3802.15"  fill="black" font-weight="bold" font-size="420.66px" font-family="Calibri">РОЛЬ ПРОЕКТНОГО ОФІСУ В РЕАЛІЗАЦІЇ ПРОГРАМИ</text>
+   <text x="6085.25" y="3802.15"  fill="black" font-weight="bold" font-size="420.66px" font-family="Calibri">РОЛЬ ПРОЄКТНОГО ОФІСУ В РЕАЛІЗАЦІЇ ПРОГРАМИ</text>
   </g>
   <g transform="matrix(0.999999 0 0 0.999999 -5729.76 -2724.19)">
    <text x="6085.25" y="3802.15"  fill="black" font-weight="bold" font-size="420.66px" font-family="Calibri">СТРАТЕГІЧНОГО РОЗВИТКУ ОРГАНІЗАЦІЇ</text>
@@ -28,12 +28,12 @@
   <polygon fill="#5B9BD5" points="8532.24,4114.15 8532.24,4816.66 11687.26,4816.66 11687.26,4114.15 "/>
   <polygon fill="none" stroke="black" stroke-width="27.34" stroke-linecap="square" stroke-miterlimit="22.9256" points="8533.29,4115.2 11688.31,4115.2 11688.31,4817.72 8533.29,4817.72 "/>
   <g transform="matrix(0.999999 0 0 0.999999 2837.17 796.819)">
-   <text x="6085.25" y="3802.15"  fill="white" font-weight="bold" font-size="351.25px" font-family="Calibri">Проектний офіс</text>
+   <text x="6085.25" y="3802.15"  fill="white" font-weight="bold" font-size="351.25px" font-family="Calibri">Проєктний офіс</text>
   </g>
   <polygon fill="#5B9BD5" points="4010.05,3546.24 4010.05,5384.57 7165.06,5384.57 7165.06,3546.24 "/>
   <polygon fill="none" stroke="black" stroke-width="27.34" stroke-linecap="square" stroke-miterlimit="22.9256" points="4011.1,3547.29 7166.12,3547.29 7166.12,5385.62 4011.1,5385.62 "/>
   <g transform="matrix(0.999999 0 0 0.999999 -1121.33 796.819)">
-   <text x="6085.25" y="3802.15"  fill="white" font-weight="bold" font-size="351.25px" font-family="Calibri">Проекти</text>
+   <text x="6085.25" y="3802.15"  fill="white" font-weight="bold" font-size="351.25px" font-family="Calibri">Проєкти</text>
   </g>
   <line fill="none" stroke="black" stroke-width="35.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" x1="5588.61" y1="2354.7" x2="5588.61" y2= "3208.39" />
   <polygon fill="black" points="5713.76,3176.05 5588.88,3546.24 5465.57,3176.05 "/>

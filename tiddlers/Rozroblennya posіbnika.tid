@@ -1,13 +1,13 @@
 color: #389cd8
 created: 20200102142457578
 icon: $:/boa/img/Доповідь
-modified: 20200125182705063
+modified: 20200126083406577
 tags: 
 title: Розроблення посібника
 
 !! Структура посібника
 
-* [[Проектне управління в НАУ]]
+* [[Проєктне управління в НАУ]]
 * [[Що таке проєкт]]
 * [[Компоненти ефективного проєктного середовище]]
 * [[Що таке Freedcamp]]
@@ -30,8 +30,8 @@ title: Розроблення посібника
 
 !! Посилання
 
-* [[НАУ відкриває вільний доступ до онлайн-платформи управління проектами|http://prof.nau.edu.ua/innonews/nau-vidkrivaye-vilnij-dostup-do-onlajn-platformi-upravlinnya-proektami]]
-* [[Проектне управління в НАУ|http://prof.nau.edu.ua/innonews/perspektivi-proektnogo-upravlinnya-v-nau]]
+* [[НАУ відкриває вільний доступ до онлайн-платформи управління проєктами|http://prof.nau.edu.ua/innonews/nau-vidkrivaye-vilnij-dostup-do-onlajn-platformi-upravlinnya-proektami]]
+* [[Проєктне управління в НАУ|http://prof.nau.edu.ua/innonews/perspektivi-proektnogo-upravlinnya-v-nau]]
 * [[Freedcamp Help|https://nauprof.freedcamp.com/help]]
 
 <!--

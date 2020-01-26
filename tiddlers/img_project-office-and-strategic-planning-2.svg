@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" viewBox="0 0 11998.55 7441.63" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <g transform="matrix(0.999999 0 0 0.999999 -6085.22 -3405.67)">
+   <text x="6085.25" y="3802.15"  fill="black" font-weight="normal" font-size="490.07px" font-family="Arial"> </text>
+  </g>
+  <polygon fill="white" points="131.48,12.62 131.48,7426.91 11983.83,7426.91 11983.83,12.62 "/>
+  <polygon fill="none" stroke="#41719C" stroke-width="27.34" stroke-linecap="square" stroke-miterlimit="22.9256" points="132.53,13.67 11984.88,13.67 11984.88,7427.96 132.53,7427.96 "/>
+  <g transform="matrix(0.999999 0 0 0.999999 -5729.76 -3228.99)">
+   <text x="6085.25" y="3802.15"  fill="black" font-weight="bold" font-size="420.66px" font-family="Calibri">РОЛЬ ПРОЕКТНОГО ОФІСУ В РЕАЛІЗАЦІЇ ПРОГРАМИ</text>
+  </g>
+  <g transform="matrix(0.999999 0 0 0.999999 -5729.76 -2724.19)">
+   <text x="6085.25" y="3802.15"  fill="black" font-weight="bold" font-size="420.66px" font-family="Calibri">СТРАТЕГІЧНОГО РОЗВИТКУ ОРГАНІЗАЦІЇ</text>
+  </g>
+  <g transform="matrix(0.999999 0 0 0.999999 1512.06 -2724.19)">
+   <text x="6085.25" y="3802.15"  fill="black" font-weight="normal" font-size="490.07px" font-family="Arial"> </text>
+  </g>
+  <polygon fill="#5B9BD5" points="4010.05,1651.13 4010.05,2353.64 7165.06,2353.64 7165.06,1651.13 "/>
+  <polygon fill="none" stroke="black" stroke-width="27.34" stroke-linecap="square" stroke-miterlimit="22.9256" points="4011.1,1652.18 7166.12,1652.18 7166.12,2354.7 4011.1,2354.7 "/>
+  <g transform="matrix(0.999999 0 0 0.999999 -1234.91 -1666.2)">
+   <text x="6085.25" y="3802.15"  fill="white" font-weight="bold" font-size="351.25px" font-family="Calibri">Програма</text>
+  </g>
+  <polygon fill="#5B9BD5" points="4010.05,6427.82 4010.05,7130.34 7165.06,7130.34 7165.06,6427.82 "/>
+  <polygon fill="none" stroke="black" stroke-width="27.34" stroke-linecap="square" stroke-miterlimit="22.9256" points="4011.1,6428.87 7166.12,6428.87 7166.12,7131.39 4011.1,7131.39 "/>
+  <g transform="matrix(0.999999 0 0 0.999999 -1085.57 3110.5)">
+   <text x="6085.25" y="3802.15"  fill="white" font-weight="bold" font-size="351.25px" font-family="Calibri">Ресурси</text>
+  </g>
+  <polygon fill="#5B9BD5" points="8532.24,4114.15 8532.24,4816.66 11687.26,4816.66 11687.26,4114.15 "/>
+  <polygon fill="none" stroke="black" stroke-width="27.34" stroke-linecap="square" stroke-miterlimit="22.9256" points="8533.29,4115.2 11688.31,4115.2 11688.31,4817.72 8533.29,4817.72 "/>
+  <g transform="matrix(0.999999 0 0 0.999999 2837.17 796.819)">
+   <text x="6085.25" y="3802.15"  fill="white" font-weight="bold" font-size="351.25px" font-family="Calibri">Проектний офіс</text>
+  </g>
+  <polygon fill="#5B9BD5" points="4010.05,3546.24 4010.05,5384.57 7165.06,5384.57 7165.06,3546.24 "/>
+  <polygon fill="none" stroke="black" stroke-width="27.34" stroke-linecap="square" stroke-miterlimit="22.9256" points="4011.1,3547.29 7166.12,3547.29 7166.12,5385.62 4011.1,5385.62 "/>
+  <g transform="matrix(0.999999 0 0 0.999999 -1121.33 796.819)">
+   <text x="6085.25" y="3802.15"  fill="white" font-weight="bold" font-size="351.25px" font-family="Calibri">Проекти</text>
+  </g>
+  <line fill="none" stroke="black" stroke-width="35.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" x1="5588.61" y1="2354.7" x2="5588.61" y2= "3208.39" />
+  <polygon fill="black" points="5713.76,3176.05 5588.88,3546.24 5465.57,3176.05 "/>
+  <line fill="none" stroke="black" stroke-width="35.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" x1="4755.69" y1="2354.7" x2="4755.69" y2= "3208.39" />
+  <polygon fill="black" points="4876.63,3176.05 4753.59,3546.24 4630.54,3176.05 "/>
+  <line fill="none" stroke="black" stroke-width="35.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" x1="6421.53" y1="2354.7" x2="6421.53" y2= "3208.39" />
+  <polygon fill="black" points="6544.58,3176.05 6421.53,3546.24 6298.48,3176.05 "/>
+  <line fill="none" stroke="black" stroke-width="35.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" x1="5641.2" y1="6427.29" x2="5641.2" y2= "5724.26" />
+  <polygon fill="black" points="5762.14,5754.76 5639.09,5384.57 5513.95,5754.76 "/>
+  <line fill="none" stroke="black" stroke-width="35.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" x1="4804.07" y1="6427.29" x2="4804.07" y2= "5724.26" />
+  <polygon fill="black" points="4927.11,5754.76 4803.28,5384.57 4681.02,5754.76 "/>
+  <line fill="none" stroke="black" stroke-width="35.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" x1="6444.67" y1="6427.29" x2="6444.67" y2= "5724.26" />
+  <polygon fill="black" points="6565.61,5754.76 6443.62,5384.57 6321.62,5754.76 "/>
+  <line fill="none" stroke="black" stroke-width="35.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" x1="8531.71" y1="4466.46" x2="7166.12" y2= "4466.46" />
+  <path fill="black" stroke="black" stroke-width="7.62" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" d="M8438.64 4465.41c0,-50.48 41.54,-91.5 92.55,-91.5 51.53,0 92.55,41.02 92.55,91.5 0,51 -41.02,91.49 -92.55,91.49 -51.01,0 -92.55,-40.49 -92.55,-91.49z"/>
+  <path fill="none" stroke="black" stroke-width="2.1" stroke-linejoin="round" stroke-miterlimit="22.9256" d="M8438.64 4465.41c0,-50.48 41.54,-91.5 92.55,-91.5 51.53,0 92.55,41.02 92.55,91.5 0,51 -41.02,91.49 -92.55,91.49 -51.01,0 -92.55,-40.49 -92.55,-91.49"/>
+  <path fill="black" stroke="black" stroke-width="7.62" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" d="M7075.67 4465.41c0,-50.48 41.54,-91.5 92.55,-91.5 51.27,0 92.55,41.02 92.55,91.5 0,50.74 -41.28,91.49 -92.55,91.49 -51.01,0 -92.55,-40.75 -92.55,-91.49z"/>
+  <path fill="none" stroke="black" stroke-width="2.1" stroke-linejoin="round" stroke-miterlimit="22.9256" d="M7075.67 4465.41c0,-50.48 41.54,-91.5 92.55,-91.5 51.27,0 92.55,41.02 92.55,91.5 0,50.74 -41.28,91.49 -92.55,91.49 -51.01,0 -92.55,-40.75 -92.55,-91.49"/>
+  <polygon fill="#5B9BD5" points="905.51,3546.24 905.51,5384.57 2318.96,5384.57 2318.96,3546.24 "/>
+  <polygon fill="none" stroke="black" stroke-width="27.34" stroke-linecap="square" stroke-miterlimit="22.9256" points="906.56,3547.29 2320.01,3547.29 2320.01,5385.62 906.56,5385.62 "/>
+  <g transform="matrix(2.64845E-14 -1 1 2.64845E-14 -2335.14 11398.3)">
+   <text x="6085.25" y="3802.15"  fill="white" font-weight="bold" font-size="351.26px" font-family="Calibri">Команди і</text>
+  </g>
+  <g transform="matrix(2.64845E-14 -0.999999 0.999999 2.64845E-14 -1859.81 11335)">
+   <text x="6085.25" y="3802.15"  fill="white" font-weight="bold" font-size="351.26px" font-family="Calibri">партнери</text>
+  </g>
+  <line fill="none" stroke="black" stroke-width="35.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" x1="2320.01" y1="4466.46" x2="3671.41" y2= "4466.46" />
+  <polygon fill="black" points="3641.97,4343.41 4010.05,4465.41 3641.97,4587.4 "/>
+  <line fill="none" stroke="black" stroke-width="35.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" x1="2320.01" y1="3944.83" x2="3671.41" y2= "3944.83" />
+  <polygon fill="black" points="3641.97,3817.57 4010.05,3942.59 3641.97,4065.77 "/>
+  <line fill="none" stroke="black" stroke-width="35.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.9256" x1="2320.01" y1="4958.64" x2="3671.41" y2= "4958.64" />
+  <polygon fill="black" points="3641.97,4835.59 4010.05,4957.85 3641.97,5081.69 "/>
+ </g>
+</svg>

@@ -1,5 +1,5 @@
 created: 20200126184459285
-modified: 20200126185705058
+modified: 20200127152034885
 order: 040
 parent: Доповідь
 tags: 
@@ -12,3 +12,27 @@ title: Завдання
 * користувацькі поля, 
 * етапи, інші типи завдань (CRM, часові завдання, Відстежувач проблем, Таскі), 
 * форми перегляду списків завдань (список, канбан, Ґантта)
+
+---
+
+* Список, перегляди Канбана та [[Ганта|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/hJbab]] (Плани для бізнесу та підприємств): виберіть спосіб роботи з завданнями.
+* Дії одним клацанням миші: Дозволяють швидко виконувати завдання та рухатися далі.
+* Легко керуйте завданнями у режимі перегляду списку за допомогою [[перетягування|http://blog.freedcamp.com/2014/09/25/all-you-need-to-know-about-todos-application-in-freedcamp/]]
+* [[Рецидиви|https://blog.freedcamp.com/2018/06/12/changes-recurrent-tasks-based-feedback/]]
+* [[Скопіюйте та перемістіть завдання та списки завдань|https://blog.freedcamp.com/2018/03/23/duplicating-and-copy-task/]]
+* Кінцеві дати щодня або щотижня резюмуйте сповіщення електронною поштою
+* Дати початку (лише платні плани)
+* Підзадачі (доступні на безкоштовних та платних планах як [[Subtasks Pro|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/6Zaab]])
+* Пріоритети
+* Статус
+* Підпишіться на людей, щоб слідкувати.
+* Додатки та вбудовані зображення.
+* Перекладіть оптом з датами Shift
+* Логічно поєднувати Завдання у списки та легко архівувати завершені списки.
+* Використовуйте [[дошки|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/szbab]] [[віджетів|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/1Tbab]], календарів та завдань, щоб [[переглянути свої завдання в одному чи кількох проектах|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/szbab]].
+* Відмінно працює з додатком [[Сторінки|https://freedcamp.com/marketplace/milestones_app]]. Ви можете натиснути [[тут|http://blog.freedcamp.com/2014/07/27/quick-tip-how-to-link-an-existing-todo-with-a-milestone/]], щоб отримати більше інформації про те, як зв’язати існуюче Завдання з етапом.
+* Ніколи не пропускайте оновлення зі спеціальними повідомленнями електронної пошти та [[сторінками сповіщень|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/ohaab]] прямо у Freedcamp.
+* [[Експорт та імпорт|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/zxbab]] завдань до / з XLS
+* Створюйте нові завдання електронною [[поштою|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/v9bab]] з допомогою функції [[Email In|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/v9bab]] (функція платного плану)
+* Створюйте спеціальні звіти за [[посиланнями каналу даних|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/Ksbab]] (функція платного плану)
+* НОВЕ: Перевірте статус своїх проектів за допомогою звітів (Бізнес та Підприємницькі плани)

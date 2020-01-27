@@ -1,0 +1,9 @@
+author: JeremyRuston
+core-version: >=5.0.0
+dependents: 
+description: Twitter for TiddlyWiki
+list: readme usage
+plugin-type: plugin
+title: $:/plugins/tiddlywiki/twitter
+type: application/json
+version: 5.1.21

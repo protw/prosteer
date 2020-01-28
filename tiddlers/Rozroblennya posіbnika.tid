@@ -1,7 +1,7 @@
 color: #389cd8
 created: 20200102142457578
 icon: $:/boa/img/Доповідь
-modified: 20200126184921920
+modified: 20200128083454811
 tags: 
 title: Розроблення посібника
 
@@ -14,14 +14,14 @@ title: Розроблення посібника
 * [[Проєктний простір НАУ]]
 * [[Структура даних і функціонал]], [[Права доступу]] - структура даних, типи користувачів
 * [[Передня панель]]
+* [[Завдання]]
 
 !! Ще треба доробити
 
-* [[Завдання]]
-* [[Сповіщення]] - час виконання, сповіщення із завдання, коментарі, календар, згадування, сповіщення (дзвіночок), налаштування сповіщень, Email in
+* [[Сповіщення]] - час виконання, сповіщення із завдання, коментарі, календар, згадування, [[сповіщення (дзвіночок)|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/ohaab]], [[налаштування сповіщень|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/phaab]], Email in, Стіна, Віджети, [[Домівка|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/0qfab]]
 * [[Пошук, фільтрація, сортування]]
 * [[Обмін даними з ФК]] - Експорт, імпорт, Email in, синхронізований канал даних
-* [[Модулі ФК]] - Завдання, Етапи, Календар, Відстежувач проблем, CRM, Файли, Обговорення, Вікі, Стіна, Перегляд, Паролі, Рахунки
+* [[Модулі ФК]] - [[Завдання]], [[Етапи|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/RXbab]], [[Календар|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/fhaab]], [[Відстежувач проблем|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/oyaab]], [[CRM|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/dhaab]], [[Часові завдання|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/kYbab]], [[Файли|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/Ygaab]], [[Обговорення|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/5Ubab]], [[Вікі|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/ehaab]], Стіна, [[Огляд|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/T5dab]], [[Паролі|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/bhaab]], [[Рахунки|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/eIdab]], [[API|https://freedcamp.com/Mobile_7Yh/iOS_application_6zp/wiki/wiki_public/view/DFaab]], [[Zapier|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/aGcab]]
 * [[Як почати]] - як організувати свою проєктну групу чи проєкт, де отримати консультаційну допомогу, загальні поради як вести проєкт (чітко встановіть ресурси проєкту, обліковані проміжні і кінцеві цілі, завдання чітко сформульовані, з виконавцем і датою виконання, добийтесь чіткої комунікації в команді, відмічайте статус виконання завдань, занотовуйте результати виконання в тілі завдання та у коментарях, проштовхуйте завдання та зміни у них до своїх партнерів по команді, відслідковуйте прогрес виконання проєкту)
 * FAQ вже починають надходити, зокрема, [[Питання від користувачів]]. Тому однозначно на доданок до [[реєстраційної форми|Реєстрація на платформі Freedcamp НАУ]] зробимо ще FAQ-форму або з допомогою //Гугл Форм// або //Відстежувача Проблем// у //Фрідкамп//. 
 ** Форма для запитань щодо роботи системи

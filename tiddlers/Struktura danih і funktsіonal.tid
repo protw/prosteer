@@ -1,6 +1,6 @@
 caption: Структура даних і функції
 created: 20200122204139245
-modified: 20200126082739922
+modified: 20200128105351468
 order: 030
 parent: Доповідь
 title: Структура даних і функціонал
@@ -32,20 +32,20 @@ title: Структура даних і функціонал
 
 ; Проєкти
 * Закриті
-* Відкриті
+* [[Публічні|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/g5dab]]
 </div>
 
 <div style="display:block;">
 
 ; Завдання
-* Етапи
+* [[Етапи|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/RXbab]]
 * Списки
-* Завдання
-* Підзадачі
-* Часові завдання
-* CRM-задачі
-* Проблеми (Issues)
-* Події
+* [[Завдання]]
+* [[Підзадачі|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/6Zaab]]
+* [[Часові завдання|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/kYbab]]
+* [[CRM-задачі|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/dhaab]]
+* [[Проблеми (Issues)|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/oyaab]]
+* [[Події|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/fhaab]]
 </div>
 
 <div style="display:block;">
@@ -61,10 +61,10 @@ title: Структура даних і функціонал
 <div style="display:block;">
 
 ; Маніпулювання ресурсами
-* Імпорт/експорт
-* Синхронізація
+* [[Експорт / імпорт|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/zxbab]]
+* [[Синхронізація|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/Ksbab]]
 * Архівація
-* Резервне копіювання
+* [[Резервне копіювання|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/BUbab]]
 </div>
 
 <div style="display:block;">
@@ -72,43 +72,43 @@ title: Структура даних і функціонал
 !! ''МОДУЛІ''
 
 ; Персональні зручності
-* Tasky
-* Закладки
-* Віджети
+* [[Tasky|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/Zgaab]]
+* [[Закладки|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/blcab]]
+* [[Віджети|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/1Tbab]]
 </div>
 
 <div style="display:block;">
 
 ; Проєктно-орієнтовані модулі
-* Файли
-* Обговорення
-* Вікі
-* Оверв'ю
+* [[Файли|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/Ygaab]]
+* [[Обговорення|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/5Ubab]]
+* [[Вікі|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/ehaab]]
+* [[Огляд (Overview)|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/T5dab]]
 </div>
 
 <div style="display:block;">
 
 ; Загальногрупові модулі
-* CRM
-* Рахунки+
-* Паролі 
-* Звіти
+* [[CRM|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/dhaab]]
+* [[Рахунки+|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/eIdab]]
+* [[Паролі|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/bhaab]]
+* [[Звіти|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/2Sdab]]
 * Стіна
 </div>
 
 <div style="display:block;">
 
 ; Глобальні модулі
-* White Label
-* Діаграми Ґанта
-* Підзадачі
-* Користувацькі поля
-* FileEdit
-* Гугл Диск
-* OneDrive
-* Dropbox
+* [[White Label|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/GJbab]]
+* [[Діаграми Ґантта|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/hJbab]]
+* [[Підзадачі|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/6Zaab]]
+* [[Користувацькі поля|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/3Tbab]]
+* [[FileEdit|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/4xbab]]
+* [[Гугл Диск|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/Iwaab]]
+* [[Dropbox|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/hSbab]]
+* [[OneDrive|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/iSbab]]
 * Шаблони проєктів
-* Публічні проєкти
+* [[Публічні проєкти|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/g5dab]]
 </div>
 
 </div>

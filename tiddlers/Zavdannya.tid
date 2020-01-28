@@ -1,5 +1,5 @@
 created: 20200126184459285
-modified: 20200127210650273
+modified: 20200128083451428
 order: 040
 parent: Доповідь
 tags: 
@@ -13,13 +13,13 @@ title: Завдання
 * Додатки та вбудовані зображення.
 * Дати початку (лише платні плани)
 * [[Регулярні завдання|https://blog.freedcamp.com/2018/06/12/changes-recurrent-tasks-based-feedback/]]
-* Теги
-* Користувацькі поля
+* [[Теги|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/SMdab]]
+* [[Користувацькі поля|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/3Tbab]]
 ">>
 
 <<details sum:"СПИСКИ ЗАВДАНЬ" status:"closed" src:"""
 * Структура завдань проєкту: списки завдань (не плутати з режимом перегляду "Списки"), завдання, [[підзадачі|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/6Zaab]] + етапи
-* [[Етапи|https://freedcamp.com/marketplace/milestones_app]]. Як зв'язати Завдання з етапом можна побачити [[тут|http://blog.freedcamp.com/2014/07/27/quick-tip-how-to-link-an-existing-todo-with-a-milestone/]]
+* [[Етапи|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/RXbab]]. Як зв'язати Завдання з етапом можна побачити [[тут|http://blog.freedcamp.com/2014/07/27/quick-tip-how-to-link-an-existing-todo-with-a-milestone/]]
 * Легке керування завданнями у списку з допомогою [[перетягування|http://blog.freedcamp.com/2014/09/25/all-you-need-to-know-about-todos-application-in-freedcamp/]]
 * [[Копіювання та переміщення завдань та списків завдань|https://blog.freedcamp.com/2018/03/23/duplicating-and-copy-task/]]
 * Перепланування дат гуртом через зсув
@@ -42,5 +42,5 @@ title: Завдання
 
 <<details sum:"ІНШЕ" status:"closed" src:"
 * Перегляд завдань у декількох проектах з допомогою дошок [[календарів, завдань|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/szbab]], [[віджетів|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/1Tbab]]
-* Інші типи завдань (CRM, часові завдання, Відстежувач проблем, Таскі), 
+* Інші типи завдань ([[Події|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/fhaab]], [[CRM|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/dhaab]], [[Часові завдання|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/kYbab]], [[Відстежувач проблем|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/oyaab]], [[Таскі|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/Zgaab]]), 
 ">>

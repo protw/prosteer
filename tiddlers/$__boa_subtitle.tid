@@ -1,5 +1,5 @@
 created: 20170104195303693
-modified: 20200115072943233
+modified: 20200130202324432
 tags: 
 title: $:/boa/subtitle
 type: text/vnd.tiddlywiki
@@ -32,6 +32,11 @@ type: text/vnd.tiddlywiki
     link={{img/audacity-logo.svg!!web-link}} 
     tooltip={{img/audacity-logo.svg!!caption}} 
     image="img/audacity-logo.svg"
+/>
+<$macrocall $name="res_link" 
+    link={{img/issue-tracker.svg!!web-link}} 
+    tooltip={{img/issue-tracker.svg!!caption}} 
+    image="img/issue-tracker.svg"
 />
 
 <div style="clear:both;"/>

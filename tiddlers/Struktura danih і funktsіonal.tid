@@ -1,6 +1,6 @@
 caption: Структура даних і функції
 created: 20200122204139245
-modified: 20200128105351468
+modified: 20200204202820610
 order: 030
 parent: Доповідь
 title: Структура даних і функціонал
@@ -9,7 +9,13 @@ title: Структура даних і функціонал
 
 !! ''СТРУКТУРИ ДАНИХ''
 
-<div style="display:block;">
+; Команди (Групи)
+* Проєктна група
+* Глобальна група
+
+; Проєкти
+* Закриті
+* [[Публічні|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/g5dab]]
 
 ; Користувачі
 * Власник
@@ -19,23 +25,6 @@ title: Структура даних і функціонал
 * Користувач
 * Гість
 * Спостерігач
-</div>
-
-<div style="display:block;">
-
-; Команди (Групи)
-* Проєктна група
-* Глобальна група
-</div>
-
-<div style="display:block;">
-
-; Проєкти
-* Закриті
-* [[Публічні|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/g5dab]]
-</div>
-
-<div style="display:block;">
 
 ; Завдання
 * [[Етапи|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/RXbab]]
@@ -46,9 +35,6 @@ title: Структура даних і функціонал
 * [[CRM-задачі|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/dhaab]]
 * [[Проблеми (Issues)|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/oyaab]]
 * [[Події|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/fhaab]]
-</div>
-
-<div style="display:block;">
 
 !! ''ФУНКЦІОНАЛ''
 
@@ -56,49 +42,34 @@ title: Структура даних і функціонал
 * Оповіщення
 * Пошук
 * Сортування, фільтрація
-</div>
-
-<div style="display:block;">
 
 ; Маніпулювання ресурсами
 * [[Експорт / імпорт|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/zxbab]]
 * [[Синхронізація|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/Ksbab]]
 * Архівація
 * [[Резервне копіювання|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/BUbab]]
-</div>
-
-<div style="display:block;">
 
 !! ''МОДУЛІ''
 
-; Персональні зручності
+; Персональні
 * [[Tasky|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/Zgaab]]
 * [[Закладки|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/blcab]]
 * [[Віджети|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/1Tbab]]
-</div>
 
-<div style="display:block;">
-
-; Проєктно-орієнтовані модулі
+; Проєктно-орієнтовані
 * [[Файли|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/Ygaab]]
 * [[Обговорення|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/5Ubab]]
 * [[Вікі|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/ehaab]]
 * [[Огляд (Overview)|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/T5dab]]
-</div>
 
-<div style="display:block;">
-
-; Загальногрупові модулі
+; Загальногрупові
 * [[CRM|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/dhaab]]
 * [[Рахунки+|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/eIdab]]
 * [[Паролі|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/bhaab]]
 * [[Звіти|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/2Sdab]]
 * Стіна
-</div>
 
-<div style="display:block;">
-
-; Глобальні модулі
+; Глобальні
 * [[White Label|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/GJbab]]
 * [[Діаграми Ґантта|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/hJbab]]
 * [[Підзадачі|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/6Zaab]]
@@ -109,6 +80,5 @@ title: Структура даних і функціонал
 * [[OneDrive|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/iSbab]]
 * Шаблони проєктів
 * [[Публічні проєкти|https://freedcamp.com/Freedcamp_LxR/Freedcamp_Devel_yOf/wiki/wiki_public/view/g5dab]]
-</div>
 
 </div>

@@ -1,11 +1,19 @@
 created: 20170104195303693
-modified: 20200130202324432
+modified: 20200205145021256
 tags: 
 title: $:/boa/subtitle
 type: text/vnd.tiddlywiki
 
 \define res_link(link, tooltip, image)
 <a href="$link$" title="$tooltip$" target="_blank"><div style="margin:4px 4px; text-align:center;float:left;">[img height=28px [$image$]]</div></a>
+\end
+
+\define res_link2(img)
+  <$macrocall $name="res_link" 
+     link={{$img$!!web-link}} 
+     tooltip={{$img$!!caption}} 
+     image="$img$"
+  />
 \end
 
 \define feedback-link(wiki-github, wiki-name, feedback-icon)
@@ -23,20 +31,9 @@ type: text/vnd.tiddlywiki
     wiki-name={{$:/boa/logo!!wiki-name}}
     feedback-icon="$:/boa/img/github-logo.svg"
 />
-<$macrocall $name="res_link" 
-    link={{img/springer-logo.svg!!web-link}} 
-    tooltip={{img/springer-logo.svg!!caption}} 
-    image="img/springer-logo.svg"
-/>
-<$macrocall $name="res_link" 
-    link={{img/audacity-logo.svg!!web-link}} 
-    tooltip={{img/audacity-logo.svg!!caption}} 
-    image="img/audacity-logo.svg"
-/>
-<$macrocall $name="res_link" 
-    link={{img/issue-tracker.svg!!web-link}} 
-    tooltip={{img/issue-tracker.svg!!caption}} 
-    image="img/issue-tracker.svg"
-/>
+<<res_link2 "img/registration.svg">>
+<<res_link2 "img/issue-tracker.svg">>
+<<res_link2 "img/springer-logo.svg">>
+<<res_link2 "img/audacity-logo.svg">>
 
 <div style="clear:both;"/>

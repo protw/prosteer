@@ -56,6 +56,7 @@ NAU Prosteer
 
 
 
+
 </title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
@@ -355,6 +356,8 @@ Error message and password prompt
 
 <li>img/project-office-and-strategic-planning-3.svg</li>
 
+<li>img/registration.svg</li>
+
 <li>img/seo-and-web.svg</li>
 
 <li>img/sitemap.svg</li>
@@ -392,6 +395,8 @@ Error message and password prompt
 <li>Передня панель</li>
 
 <li>Питання від користувачів</li>
+
+<li>Під'єднання Twitter і Tiddlywiki</li>
 
 <li>Поєднання функціонального і проєктного управління</li>
 
@@ -841,9 +846,17 @@ viewBox=&quot;0 0 16909 16909&quot;
 
 &lt;&lt;wiki-list&gt;&gt;</pre>
 </div>
-<div created="20170104195303693" modified="20200130202324432" tags="" title="$:/boa/subtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20170104195303693" modified="20200205145021256" tags="" title="$:/boa/subtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>\define res_link(link, tooltip, image)
 &lt;a href=&quot;$link$&quot; title=&quot;$tooltip$&quot; target=&quot;_blank&quot;&gt;&lt;div style=&quot;margin:4px 4px; text-align:center;float:left;&quot;&gt;[img height=28px [$image$]]&lt;/div&gt;&lt;/a&gt;
+\end
+
+\define res_link2(img)
+  &lt;$macrocall $name=&quot;res_link&quot; 
+     link={{$img$!!web-link}} 
+     tooltip={{$img$!!caption}} 
+     image=&quot;$img$&quot;
+  /&gt;
 \end
 
 \define feedback-link(wiki-github, wiki-name, feedback-icon)
@@ -861,21 +874,10 @@ viewBox=&quot;0 0 16909 16909&quot;
     wiki-name={{$:/boa/logo!!wiki-name}}
     feedback-icon=&quot;$:/boa/img/github-logo.svg&quot;
 /&gt;
-&lt;$macrocall $name=&quot;res_link&quot; 
-    link={{img/springer-logo.svg!!web-link}} 
-    tooltip={{img/springer-logo.svg!!caption}} 
-    image=&quot;img/springer-logo.svg&quot;
-/&gt;
-&lt;$macrocall $name=&quot;res_link&quot; 
-    link={{img/audacity-logo.svg!!web-link}} 
-    tooltip={{img/audacity-logo.svg!!caption}} 
-    image=&quot;img/audacity-logo.svg&quot;
-/&gt;
-&lt;$macrocall $name=&quot;res_link&quot; 
-    link={{img/issue-tracker.svg!!web-link}} 
-    tooltip={{img/issue-tracker.svg!!caption}} 
-    image=&quot;img/issue-tracker.svg&quot;
-/&gt;
+&lt;&lt;res_link2 &quot;img/registration.svg&quot;&gt;&gt;
+&lt;&lt;res_link2 &quot;img/issue-tracker.svg&quot;&gt;&gt;
+&lt;&lt;res_link2 &quot;img/springer-logo.svg&quot;&gt;&gt;
+&lt;&lt;res_link2 &quot;img/audacity-logo.svg&quot;&gt;&gt;
 
 &lt;div style=&quot;clear:both;&quot;/&gt;</pre>
 </div>
@@ -10191,7 +10193,7 @@ viewBox=&quot;0 0 16909 16909&quot;
 <div .tc-site-title="before {" color="silver;" content="&quot;TW &lt;&lt;version&gt;&gt;&quot;;" created="20180906042308596" creator="Mohammad" font-size="13px;" margin-top="-1.9em;" modified="20200121134530309" modifier="Mohammad" position="absolute;" tags="kookma" title="$:/plugins/kookma/utility/stylesheet/tw-version" type="application/x-tiddler" revision="0" bag="default">
 <pre></pre>
 </div>
-<div created="20181010162537613" creator="Mohammad" description="Toggle field handling in view mode" list-after="$:/core/ui/ViewTemplate/tags" modified="20200130202440207" modifier="Mohammad" tags="" title="$:/plugins/kookma/utility/viewtemplate/view-fields" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20181010162537613" creator="Mohammad" description="Toggle field handling in view mode" list-after="$:/core/ui/ViewTemplate/tags" modified="20200205174140948" modifier="Mohammad" tags="" title="$:/plugins/kookma/utility/viewtemplate/view-fields" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>\define lingo-base() $:/language/EditTemplate/
 \define config-title()
 $:/config/EditTemplateFields/Visibility/$(currentField)$
@@ -10790,7 +10792,7 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 <div _canonical_uri="./images/img%252Fios.svg" created="20200111195750224" modified="20200112085924762" svg="image" title="img/ios.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div _canonical_uri="./images/img%252Fissue-tracker.svg" caption="Відстежувач проблем НАУПРОСТІР (Freedcamp НАУ)" created="20200130200924170" modified="20200130202433456" svg="image" tags="" title="img/issue-tracker.svg" type="image/svg+xml" web-link="https://protw.github.io/prosteer/issuetracker.html#" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fissue-tracker.svg" caption="Відстежувач проблем НАУПРОСТІР (Freedcamp НАУ)" created="20200130200924170" modified="20200205140239948" svg="image" tags="" title="img/issue-tracker.svg" type="image/svg+xml" web-link="https://docs.google.com/forms/d/1rDnNLSShNHrSvQhpI0AEoS1K7xpS5e3otAS8BC5h-_s" revision="2" bag="default">
 <pre></pre>
 </div>
 <div created="20200111145410016" modified="20200112085936948" svg="script" title="img/key.svg" revision="0" bag="default">
@@ -10898,6 +10900,9 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 <div _canonical_uri="./images/img%252Fproject-office-and-strategic-planning-3.svg" created="20200125212403262" modified="20200125212410902" title="img/project-office-and-strategic-planning-3.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
+<div _canonical_uri="./images/img%252Fregistration.svg" caption="Реєстрація на НАУПРОСТІР (Freedcamp НАУ)" created="20200205133340796" modified="20200205141638790" svg="image" title="img/registration.svg" type="image/svg+xml" web-link="https://docs.google.com/forms/d/1_UEFLknR-uFFbLAUz0W-VU32wgRHztuURljYz_bLFXw/" revision="2" bag="default">
+<pre></pre>
+</div>
 <div _canonical_uri="./images/img%252Fseo-and-web.svg" created="20200111185959137" modified="20200112090101283" svg="image" title="img/seo-and-web.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
@@ -10910,7 +10915,7 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 <div _canonical_uri="./images/img%252Fspending.svg" created="20200111201920337" modified="20200112090127885" svg="image" title="img/spending.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div _canonical_uri="./images/img%252Fspringer-logo.svg" caption="Springer Link - відкритий доступ до наукових публікацій з мережі НАУ" created="20200114202932453" modified="20200125111508687" title="img/springer-logo.svg" type="image/svg+xml" web-link="https://link.springer.com/" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fspringer-logo.svg" caption="Springer Link - відкритий доступ до наукових публікацій з мережі НАУ" created="20200114202932453" modified="20200205141543031" title="img/springer-logo.svg" type="image/svg+xml" web-link="https://link.springer.com/" revision="2" bag="default">
 <pre></pre>
 </div>
 <div _canonical_uri="./images/img%252Ftask-scheduling.svg" created="20200111185325841" modified="20200111185332582" title="img/task-scheduling.svg" type="image/svg+xml" revision="2" bag="default">
@@ -11160,6 +11165,41 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 # Можливість синхронізації з гугл календарем.
 
 Негайна відповідь така - все зазначене вище включено до функціоналу Фрідкампу. Намагатимусь у доповіді надати докладніші відповіді на ці та інші питання.</pre>
+</div>
+<div caption="Twitter і Tiddlywiki" created="20200205165627895" modified="20200205174602287" order="115" parent="Доповідь" tags="" title="Під'єднання Twitter і Tiddlywiki" revision="0" bag="default">
+<pre>&lt;style&gt; td {max-width:700px;} &lt;/style&gt;
+
+&lt;&lt;details sum:&quot;ФУНКЦІОНАЛ ТВІТТЕРУ&quot; status:&quot;open&quot; src:&quot;
+Функціонал Твіттеру, потенційно корисний для офісу, включає:
+
+|table-striped-row|k
+|!№|!Інструмент|!Функція|
+|^1 |^Твіти&lt;br/&gt;(Tweets) |^Короткі суттєві повідомлення (280 символів включаючи пробіли) розташовані у профілі публікатора покликані передати суть новини; можливе застосування посилань, репости, коментарі та відповіді та інше; також відображає репости зроблені з чужих твітів, звернення зі згадуваннями інших профілів тощо. |
+|^2 |^Твіти та відповіді&lt;br/&gt;(Tweets and answers) |^Загалом, ширший елемент у якому відображаються також твіти, залучені у якості переписки з іншим користувачем, наприклад коментарі чи відповіді залишені під чужими твітами. |
+|^3 |^Медіа&lt;br/&gt;(Media) |^Фото- та відеоматеріали опубліковані у профілі (включаючи ті, які доповнювали твіти). |
+|^4 |^Подобається та репост&lt;br/&gt;(Likes and Repost) |^Інструмент заохочення та поширення інформації у твіттері серед більшої групи користувачів у одному полі. |
+|^5 |^Закладки&lt;br/&gt;(Bookmarks) |^Збережені твіти для зручності та швидкого доступу до певних матеріалів обходячи пошук. |
+|^6 |^Хештеги&lt;br/&gt;(Hashtags) |^Головний елемент розповсюдження інформації у Тwitter – поширення своїх твітів за допомогою ключових слів / гіперпосилань із застосуванням знаку решітки; використовується для залучення максимальної кількості користувачів до своєї стрічки. |
+|^7 |^Повідомлення&lt;br/&gt;(Notifications and Messages) |^Повідомлення отримані приватно від інших користувачів, а також усі дії, що пов’язані з профілем – дії підписок, відповіді на твіти, репости тощо; підсумки активності. |
+|^8 |^Підписники та підписки&lt;br/&gt;(Followers and Following) |^Підписники – люди/організації, для яких випускається контент, аудиторія, відвідувачі сайту, залучені особи до проєкту тощо; підписки – люди/організації, за контентом яких ви намагаєтесь слідкувати, з тих чи інших переконань. |
+|^9 |^Реклама в Тwitter&lt;br/&gt;(Twitter Ads) |^Інструмент підвищення залученості аудиторії до свого профілю з широкими можливостями таргетування; виключно платна. |
+|^10 |^Пошук та актуальні теми&lt;br/&gt;(Search and Actual topics) |^Пошук за хештегами, словами або іменами, а також найактуальніші 10 тем (можна обмежувати за геогрфічними чи галузевими показниками). |
+&quot;&gt;&gt;
+
+&lt;&lt;details sum:&quot;РОБОТА З ТВІТТЕРОМ В ТІДЛІВІКІ&quot; status:&quot;open&quot; src:&quot;&quot;&quot;
+Робота зі стрічкою офісу/проєкту в Twitter за допомогою плагінів Tiddlywiki здійснюється наступним чином:
+
+|table-striped-row table-caption-top|k
+|Створення сторінки/стрічки/профілю офісу або окремого проєкту в Twitter|c
+|!Функція|!Функціонал плагіну|!Приклад|
+|^Розташування підписів-посилань на створену сторінку у&lt;br/&gt;статтях Tiddlywiki |^Follow Button |^`&lt;$twitter type=&quot;followButton&quot; screenName=&quot;TiddlyWiki&quot;/&gt;` |
+|^Розташування/посилання на окремі твіти (наші або чужі) у статтях Tiddlywiki |^Tweet |^`&lt;$twitter type=&quot;tweet&quot; tweetID=&quot;750677030589587456&quot;/&gt;` |
+|^Розташування постів (твітів) у Twitter засобами Tiddlywiki |^Share Button |^`&lt;$twitter type=&quot;shareButton&quot; url=&quot;https://tiddlywiki.com/&quot; text=&quot;Mind blown!&quot;/&gt;` |
+|^Розташування постів (твітів) із хєштегами у Twitter засобами Tiddlywiki |^Hashtag Button |^`&lt;$twitter type=&quot;hashtagButton&quot; hashtag=&quot;TiddlyWiki&quot;/&gt;` |
+|^Розташування постів (твітів) зі згадуваннями у Twitter&lt;br/&gt;засобами Tiddlywiki |^Mention Button |^`&lt;$twitter type=&quot;mentionButton&quot; screenName=&quot;TiddlyWiki&quot;/&gt;` |
+|^Розташування/посилання на/ згадування стрічки певного профілю з n-кількістю постів (твітів) у статтях Tiddlywiki |^Profile Timeline |^`&lt;$twitter type=&quot;timelineProfile&quot; screenName=&quot;tiddlywiki&quot;/&gt;`&lt;br/&gt;`&lt;$twitter type=&quot;timelineProfile&quot; screenName=&quot;tiddlywiki&quot; tweetLimit=&quot;3&quot;/&gt;` |
+|^Розташування/посилання на/згадування n-кількості лайків певного профілю (або усіх) у статтях Tiddlywiki |^Like Timeline |^`&lt;$twitter type=&quot;timelineLikes&quot; screenName=&quot;tiddlywiki&quot;/&gt;`&lt;br/&gt;`&lt;$twitter type=&quot;timelineLikes&quot; screenName=&quot;tiddlywiki&quot; tweetLimit=&quot;3&quot;/&gt;` |
+&quot;&quot;&quot;&gt;&gt;</pre>
 </div>
 <div caption="Поєднання типів управління" created="20200126134719707" modified="20200126135328178" order="040" parent="Проєктний офіс в контексті стратегічного управління" tags="" title="Поєднання функціонального і проєктного управління" revision="0" bag="default">
 <pre>Насправді суто проєктний або функціональний менеджмент є певними ідеалізованими крайнощами. В реальному житті потрібно певне співвідношення між цими двома формами в залежності від завдань організації.

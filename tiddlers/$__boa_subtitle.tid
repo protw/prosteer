@@ -1,39 +1,39 @@
 created: 20170104195303693
-modified: 20200205145021256
+modified: 20200208225928548
 tags: 
 title: $:/boa/subtitle
 type: text/vnd.tiddlywiki
 
-\define res_link(link, tooltip, image)
-<a href="$link$" title="$tooltip$" target="_blank"><div style="margin:4px 4px; text-align:center;float:left;">[img height=28px [$image$]]</div></a>
+\define div-img(image) <div style="margin:4px 4px; text-align:center;float:left;">[img height=28px [$image$]]</div>
+
+\define res_link_out(link, tooltip, image)
+<a href="$link$" title="$tooltip$" target="_blank"><$macrocall $name="div-img" image="$image$"/></a>
 \end
 
-\define res_link2(img)
-  <$macrocall $name="res_link" 
-     link={{$img$!!web-link}} 
-     tooltip={{$img$!!caption}} 
-     image="$img$"
-  />
+\define res_link_outside(img)
+  <$macrocall $name="res_link_out" link={{$img$!!web-link}} tooltip={{$img$!!caption}} image="$img$"/>
 \end
 
-\define feedback-link(wiki-github, wiki-name, feedback-icon)
-<a href="$wiki-github$/issues/new" title="Feedback on the '$wiki-name$' project via Github" target="_blank"><div style="margin:4px 4px; text-align:center;float:left;">[img height=28px [$feedback-icon$]]</div></a>
+\define feedback-link(wiki-github, wiki-name, image)
+  <$macrocall $name="res_link_out" link="$wiki-github$/issues/new" tooltip="Feedback on the '$wiki-name$' project via Github" image="$image$"/>
+\end
+
+\define res_link_in(link, tooltip, image)
+  <$link to="$link$" tooltip="$tooltip$"><$macrocall $name="div-img" image="$image$"/></$link>
+\end
+
+\define res_link_inside(img)
+  <$macrocall $name="res_link_in" link={{$img$!!web-link}} tooltip={{$img$!!caption}} image="$img$"/>
 \end
 
 <div style="clear:both;"/>
-<<res_link 
-    "https://protw.github.io" 
-    "ProTW Publishing central site" 
-    "$:/boa/img/protw-logo.svg"
->>
-<$macrocall $name="feedback-link" 
-    wiki-github={{$:/boa/logo!!wiki-github}} 
-    wiki-name={{$:/boa/logo!!wiki-name}}
-    feedback-icon="$:/boa/img/github-logo.svg"
-/>
-<<res_link2 "img/registration.svg">>
-<<res_link2 "img/issue-tracker.svg">>
-<<res_link2 "img/springer-logo.svg">>
-<<res_link2 "img/audacity-logo.svg">>
 
+<<res_link_out "https://protw.github.io" "ProTW Publishing central site" "$:/boa/img/protw-logo.svg">>
+<$macrocall $name="feedback-link" wiki-github={{$:/boa/logo!!wiki-github}} wiki-name={{$:/boa/logo!!wiki-name}} image="$:/boa/img/github-logo.svg"/>
+<<res_link_inside "img/registration.svg">>
+<<res_link_inside "img/issue-tracker.svg">>
+<!--
+<<res_link_outside "img/springer-logo.svg">>
+<<res_link_outside "img/audacity-logo.svg">>
+-->
 <div style="clear:both;"/>

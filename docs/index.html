@@ -56,7 +56,6 @@ NAU Prosteer
 
 
 
-
 </title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
@@ -282,6 +281,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth</li>
 
+<li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
+
 <li>img/alarm-clock.svg</li>
 
 <li>img/audacity-logo.svg</li>
@@ -380,6 +381,8 @@ Error message and password prompt
 
 <li>Tool</li>
 
+<li>Вирішення проблем з G Suite і Freedcamp</li>
+
 <li>Входження до проєктного простору НАУ</li>
 
 <li>Завдання</li>
@@ -387,6 +390,8 @@ Error message and password prompt
 <li>Загально доступні функції</li>
 
 <li>Компоненти ефективного проєктного середовище</li>
+
+<li>Корисні посилання</li>
 
 <li>Кромплатформеність</li>
 
@@ -846,39 +851,39 @@ viewBox=&quot;0 0 16909 16909&quot;
 
 &lt;&lt;wiki-list&gt;&gt;</pre>
 </div>
-<div created="20170104195303693" modified="20200205145021256" tags="" title="$:/boa/subtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
-<pre>\define res_link(link, tooltip, image)
-&lt;a href=&quot;$link$&quot; title=&quot;$tooltip$&quot; target=&quot;_blank&quot;&gt;&lt;div style=&quot;margin:4px 4px; text-align:center;float:left;&quot;&gt;[img height=28px [$image$]]&lt;/div&gt;&lt;/a&gt;
+<div created="20170104195303693" modified="20200208225928548" tags="" title="$:/boa/subtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>\define div-img(image) &lt;div style=&quot;margin:4px 4px; text-align:center;float:left;&quot;&gt;[img height=28px [$image$]]&lt;/div&gt;
+
+\define res_link_out(link, tooltip, image)
+&lt;a href=&quot;$link$&quot; title=&quot;$tooltip$&quot; target=&quot;_blank&quot;&gt;&lt;$macrocall $name=&quot;div-img&quot; image=&quot;$image$&quot;/&gt;&lt;/a&gt;
 \end
 
-\define res_link2(img)
-  &lt;$macrocall $name=&quot;res_link&quot; 
-     link={{$img$!!web-link}} 
-     tooltip={{$img$!!caption}} 
-     image=&quot;$img$&quot;
-  /&gt;
+\define res_link_outside(img)
+  &lt;$macrocall $name=&quot;res_link_out&quot; link={{$img$!!web-link}} tooltip={{$img$!!caption}} image=&quot;$img$&quot;/&gt;
 \end
 
-\define feedback-link(wiki-github, wiki-name, feedback-icon)
-&lt;a href=&quot;$wiki-github$/issues/new&quot; title=&quot;Feedback on the '$wiki-name$' project via Github&quot; target=&quot;_blank&quot;&gt;&lt;div style=&quot;margin:4px 4px; text-align:center;float:left;&quot;&gt;[img height=28px [$feedback-icon$]]&lt;/div&gt;&lt;/a&gt;
+\define feedback-link(wiki-github, wiki-name, image)
+  &lt;$macrocall $name=&quot;res_link_out&quot; link=&quot;$wiki-github$/issues/new&quot; tooltip=&quot;Feedback on the '$wiki-name$' project via Github&quot; image=&quot;$image$&quot;/&gt;
+\end
+
+\define res_link_in(link, tooltip, image)
+  &lt;$link to=&quot;$link$&quot; tooltip=&quot;$tooltip$&quot;&gt;&lt;$macrocall $name=&quot;div-img&quot; image=&quot;$image$&quot;/&gt;&lt;/$link&gt;
+\end
+
+\define res_link_inside(img)
+  &lt;$macrocall $name=&quot;res_link_in&quot; link={{$img$!!web-link}} tooltip={{$img$!!caption}} image=&quot;$img$&quot;/&gt;
 \end
 
 &lt;div style=&quot;clear:both;&quot;/&gt;
-&lt;&lt;res_link 
-    &quot;https://protw.github.io&quot; 
-    &quot;ProTW Publishing central site&quot; 
-    &quot;$:/boa/img/protw-logo.svg&quot;
-&gt;&gt;
-&lt;$macrocall $name=&quot;feedback-link&quot; 
-    wiki-github={{$:/boa/logo!!wiki-github}} 
-    wiki-name={{$:/boa/logo!!wiki-name}}
-    feedback-icon=&quot;$:/boa/img/github-logo.svg&quot;
-/&gt;
-&lt;&lt;res_link2 &quot;img/registration.svg&quot;&gt;&gt;
-&lt;&lt;res_link2 &quot;img/issue-tracker.svg&quot;&gt;&gt;
-&lt;&lt;res_link2 &quot;img/springer-logo.svg&quot;&gt;&gt;
-&lt;&lt;res_link2 &quot;img/audacity-logo.svg&quot;&gt;&gt;
 
+&lt;&lt;res_link_out &quot;https://protw.github.io&quot; &quot;ProTW Publishing central site&quot; &quot;$:/boa/img/protw-logo.svg&quot;&gt;&gt;
+&lt;$macrocall $name=&quot;feedback-link&quot; wiki-github={{$:/boa/logo!!wiki-github}} wiki-name={{$:/boa/logo!!wiki-name}} image=&quot;$:/boa/img/github-logo.svg&quot;/&gt;
+&lt;&lt;res_link_inside &quot;img/registration.svg&quot;&gt;&gt;
+&lt;&lt;res_link_inside &quot;img/issue-tracker.svg&quot;&gt;&gt;
+&lt;!--
+&lt;&lt;res_link_outside &quot;img/springer-logo.svg&quot;&gt;&gt;
+&lt;&lt;res_link_outside &quot;img/audacity-logo.svg&quot;&gt;&gt;
+--&gt;
 &lt;div style=&quot;clear:both;&quot;/&gt;</pre>
 </div>
 <div created="20190711184942275" modified="20190717131041154" tags="" title="$:/boa/template-wiki-settings" revision="0" bag="default">
@@ -10193,7 +10198,7 @@ viewBox=&quot;0 0 16909 16909&quot;
 <div .tc-site-title="before {" color="silver;" content="&quot;TW &lt;&lt;version&gt;&gt;&quot;;" created="20180906042308596" creator="Mohammad" font-size="13px;" margin-top="-1.9em;" modified="20200121134530309" modifier="Mohammad" position="absolute;" tags="kookma" title="$:/plugins/kookma/utility/stylesheet/tw-version" type="application/x-tiddler" revision="0" bag="default">
 <pre></pre>
 </div>
-<div created="20181010162537613" creator="Mohammad" description="Toggle field handling in view mode" list-after="$:/core/ui/ViewTemplate/tags" modified="20200205174140948" modifier="Mohammad" tags="" title="$:/plugins/kookma/utility/viewtemplate/view-fields" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20181010162537613" creator="Mohammad" description="Toggle field handling in view mode" list-after="$:/core/ui/ViewTemplate/tags" modified="20200208230156015" modifier="Mohammad" tags="" title="$:/plugins/kookma/utility/viewtemplate/view-fields" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>\define lingo-base() $:/language/EditTemplate/
 \define config-title()
 $:/config/EditTemplateFields/Visibility/$(currentField)$
@@ -10717,8 +10722,8 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 <div created="20200121134653989" modified="20200125090039411" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint" revision="0" bag="default">
 <pre>1160px</pre>
 </div>
-<div created="20200125090046984" modified="20200125090047317" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth" revision="0" bag="default">
-<pre>300px</pre>
+<div created="20200125090046984" modified="20200208195010401" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth" revision="0" bag="default">
+<pre>390px</pre>
 </div>
 <div created="20190716175104750" modified="20200125090016922" tags="" title="$:/themes/tiddlywiki/vanilla/metrics/storyright" revision="0" bag="default">
 <pre>1170px</pre>
@@ -10729,10 +10734,13 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 <div created="20190716175121909" modified="20200125090030006" tags="" title="$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth" revision="0" bag="default">
 <pre>1086px</pre>
 </div>
+<div created="20200208194854108" modified="20200208195046416" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout" revision="0" bag="default">
+<pre>fluid-fixed</pre>
+</div>
 <div _canonical_uri="./images/img%252Falarm-clock.svg" created="20200111174945740" modified="20200112085537788" svg="image" title="img/alarm-clock.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div _canonical_uri="./images/img%252Faudacity-logo.svg" caption="Audacity - це простий у користуванні багатотрековий аудіо редактор та диктофон для Windows, Mac OS X, Linux та інших операційних систем. Розроблений групою професіоналів-ентузіастів як відкритий код." created="20200115072335271" modified="20200115072813675" title="img/audacity-logo.svg" type="image/svg+xml" web-link="https://www.audacityteam.org/" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Faudacity-logo.svg" caption="Audacity - це простий у користуванні багатотрековий аудіо редактор та диктофон для Windows, Mac OS X, Linux та інших операційних систем." created="20200115072335271" modified="20200208224139851" name="Audacity" tags="Корисне" title="img/audacity-logo.svg" type="image/svg+xml" web-link="https://www.audacityteam.org/" revision="2" bag="default">
 <pre></pre>
 </div>
 <div created="20200111152601314" modified="20200112085552081" svg="script" title="img/balance-scale.svg" revision="0" bag="default">
@@ -10792,7 +10800,7 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 <div _canonical_uri="./images/img%252Fios.svg" created="20200111195750224" modified="20200112085924762" svg="image" title="img/ios.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div _canonical_uri="./images/img%252Fissue-tracker.svg" caption="Відстежувач проблем НАУПРОСТІР (Freedcamp НАУ)" created="20200130200924170" modified="20200205140239948" svg="image" tags="" title="img/issue-tracker.svg" type="image/svg+xml" web-link="https://docs.google.com/forms/d/1rDnNLSShNHrSvQhpI0AEoS1K7xpS5e3otAS8BC5h-_s" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fissue-tracker.svg" caption="Відстежувач проблем НАУПРОСТІР (Freedcamp НАУ)" created="20200130200924170" modified="20200208210445169" svg="image" tags="" title="img/issue-tracker.svg" type="image/svg+xml" web-link="Вирішення проблем з G Suite і Freedcamp" revision="2" bag="default">
 <pre></pre>
 </div>
 <div created="20200111145410016" modified="20200112085936948" svg="script" title="img/key.svg" revision="0" bag="default">
@@ -10900,7 +10908,7 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 <div _canonical_uri="./images/img%252Fproject-office-and-strategic-planning-3.svg" created="20200125212403262" modified="20200125212410902" title="img/project-office-and-strategic-planning-3.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div _canonical_uri="./images/img%252Fregistration.svg" caption="Реєстрація на НАУПРОСТІР (Freedcamp НАУ)" created="20200205133340796" modified="20200205141638790" svg="image" title="img/registration.svg" type="image/svg+xml" web-link="https://docs.google.com/forms/d/1_UEFLknR-uFFbLAUz0W-VU32wgRHztuURljYz_bLFXw/" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fregistration.svg" caption="Реєстрація на НАУПРОСТІР (Freedcamp НАУ)" created="20200205133340796" modified="20200208215338897" svg="image" title="img/registration.svg" type="image/svg+xml" web-link="Реєстраційна форма Freedcamp НАУ" revision="2" bag="default">
 <pre></pre>
 </div>
 <div _canonical_uri="./images/img%252Fseo-and-web.svg" created="20200111185959137" modified="20200112090101283" svg="image" title="img/seo-and-web.svg" type="image/svg+xml" revision="2" bag="default">
@@ -10915,7 +10923,7 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 <div _canonical_uri="./images/img%252Fspending.svg" created="20200111201920337" modified="20200112090127885" svg="image" title="img/spending.svg" type="image/svg+xml" revision="2" bag="default">
 <pre></pre>
 </div>
-<div _canonical_uri="./images/img%252Fspringer-logo.svg" caption="Springer Link - відкритий доступ до наукових публікацій з мережі НАУ" created="20200114202932453" modified="20200205141543031" title="img/springer-logo.svg" type="image/svg+xml" web-link="https://link.springer.com/" revision="2" bag="default">
+<div _canonical_uri="./images/img%252Fspringer-logo.svg" caption="Springer Link - відкритий доступ до наукових публікацій з мережі НАУ" created="20200114202932453" modified="20200208221256024" name="Springer Link" tags="Корисне" title="img/springer-logo.svg" type="image/svg+xml" web-link="https://link.springer.com/" revision="2" bag="default">
 <pre></pre>
 </div>
 <div _canonical_uri="./images/img%252Ftask-scheduling.svg" created="20200111185325841" modified="20200111185332582" title="img/task-scheduling.svg" type="image/svg+xml" revision="2" bag="default">
@@ -10944,6 +10952,9 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 </div>
 <div color="#ce8f4a" created="20200115070518699" icon="$:/boa/img/tools" modified="20200115070606526" title="Tool" revision="0" bag="default">
 <pre></pre>
+</div>
+<div caption="Вирішення проблем" created="20200208203738258" icon="img/issue-tracker.svg" modified="20200208204530479" order="098" parent="Доповідь" tags="" title="Вирішення проблем з G Suite і Freedcamp" revision="0" bag="default">
+<pre>&lt;iframe src=&quot;https://docs.google.com/forms/d/e/1FAIpQLSe5xSZACUFAltS-y6OxSSwXTevCduAroapeOsotMt0UvLsZMQ/viewform?embedded=true&quot; width=&quot;100%&quot; height=&quot;950&quot; frameborder=&quot;0&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot;&gt;Вирішення проблем з G Suite і Freedcamp&lt;/iframe&gt;</pre>
 </div>
 <div color="#389cd8" created="20200125114736514" icon="$:/boa/img/Доповідь" modified="20200126081805979" tags="" title="Входження до проєктного простору НАУ" revision="0" bag="default">
 <pre>&lt;&lt;tabs tabsList:&quot;[parent[Доповідь]sort[order]]&quot; default:&quot;Проєктне управління в НАУ&quot; class:&quot;tc-vertical&quot;&gt;&gt;</pre>
@@ -11056,6 +11067,20 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 &quot;&quot;&quot;&gt;&gt;
 
 &lt;&lt;dbadge &quot;''Використані іконки''&quot; &quot;''Flaticon.com''&quot; &quot;info&quot;&gt;&gt;</pre>
+</div>
+<div created="20200208195815144" modified="20200208230152717" order="125" parent="Доповідь" tags="" title="Корисні посилання" revision="0" bag="default">
+<pre>&lt;$list filter=&quot;[tag[Корисне]]&quot;&gt;
+  &lt;$set name=&quot;useful-name&quot; tiddler=&lt;&lt;currentTiddler&gt;&gt; field=&quot;name&quot;&gt;
+  &lt;$set name=&quot;useful-text&quot; tiddler=&lt;&lt;currentTiddler&gt;&gt; field=&quot;caption&quot;&gt;
+  &lt;$set name=&quot;useful-link&quot; tiddler=&lt;&lt;currentTiddler&gt;&gt; field=&quot;web-link&quot;&gt;
+        &lt;a href=&lt;&lt;useful-link&gt;&gt; target=&quot;_blank&quot;&gt;
+            &lt;$macrocall $name=&quot;image-card&quot; img=&lt;&lt;currentTiddler&gt;&gt; align=&quot;left&quot; width=&quot;200px&quot; title=&lt;&lt;useful-name&gt;&gt; footer=&lt;&lt;useful-text&gt;&gt;/&gt;
+        &lt;/a&gt;
+    &lt;/$set&gt;
+    &lt;/$set&gt;
+    &lt;/$set&gt;
+&lt;/$list&gt;
+</pre>
 </div>
 <div created="20200122203549693" modified="20200122215350674" order="025" parent="Що таке Freedcamp" tags="" title="Кромплатформеність" revision="0" bag="default">
 <pre>!! Кромплатформеність
@@ -11548,8 +11573,9 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 &lt;$macrocall $name=&quot;alert-success&quot; text=&quot;Принагідно варто зазначити, що серед іншого неоціненними перевагами університетського сервісу //G Suite// є необмежений поштовий і дисковий простір на Гугл Диску, доступність сервісів //Meet//, //Classroom// та інших!&quot;/&gt;
 &quot;&quot;&quot;&gt;&gt;</pre>
 </div>
-<div caption="Реєстраційна форма" created="20200115130207486" modified="20200125120655481" order="097" parent="Доповідь" title="Реєстраційна форма Freedcamp НАУ" revision="0" bag="default">
-<pre>&lt;iframe src=&quot;https://docs.google.com/forms/d/e/1FAIpQLSdJXtNv7ZLiTFu-Lc_ztDaPPK2kDAkTv18T5y5UcRdc9WJnmg/viewform?embedded=true&quot; width=&quot;100%&quot; height=&quot;2050&quot; frameborder=&quot;0&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot;&gt;Завантаження…&lt;/iframe&gt;</pre>
+<div caption="Реєстраційна форма" created="20200115130207486" icon="img/registration.svg" modified="20200208204203590" order="097" parent="Доповідь" title="Реєстраційна форма Freedcamp НАУ" revision="0" bag="default">
+<pre>&lt;iframe src=&quot;https://docs.google.com/forms/d/e/1FAIpQLSeqpShJsgMAdjNQ1NReEKIA_Ax6FrDdVWXy5ahbVFOD45W2Cw/viewform?embedded=true&quot; width=&quot;100%&quot; height=&quot;2150&quot; frameborder=&quot;0&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot;&gt;Завантаження…&lt;/iframe&gt;
+</pre>
 </div>
 <div caption="Реєстрація у НАУПРОСТІР" created="20200115141909620" modified="20200125181923274" order="095" parent="Доповідь" title="Реєстрація на платформі Freedcamp НАУ" revision="0" bag="default">
 <pre>&lt;style&gt; td {min-width:150px;}&lt;/style&gt;
@@ -11580,7 +11606,7 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 &lt;$link overrideClass=&quot;btn btn-primary&quot; to=&quot;Реєстраційна форма Freedcamp НАУ&quot;&gt;''ЕЛЕКТРОННА''&lt;br/&gt;''РЕЄСТРАЦІЙНА ФОРМА''&lt;/$link&gt;
 &lt;/center&gt;</pre>
 </div>
-<div color="#389cd8" created="20200102142457578" icon="$:/boa/img/Доповідь" modified="20200204195419502" tags="" title="Розроблення посібника" revision="0" bag="default">
+<div color="#389cd8" created="20200102142457578" icon="$:/boa/img/Доповідь" modified="20200208231322820" tags="" title="Розроблення посібника" revision="0" bag="default">
 <pre>!! Структура посібника
 
 * [[Проєктне управління в НАУ]]
@@ -11598,11 +11624,11 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 * [[Як почати]] - як організувати свою проєктну групу чи проєкт, де отримати консультаційну допомогу, загальні поради як вести проєкт (чітко встановіть ресурси проєкту, обліковані проміжні і кінцеві цілі, завдання чітко сформульовані, з виконавцем і датою виконання, добийтесь чіткої комунікації в команді, відмічайте статус виконання завдань, занотовуйте результати виконання в тілі завдання та у коментарях, проштовхуйте завдання та зміни у них до своїх партнерів по команді, відслідковуйте прогрес виконання проєкту)
 * FAQ вже починають надходити, зокрема, [[Питання від користувачів]]. Тому однозначно на доданок до [[реєстраційної форми|Реєстрація на платформі Freedcamp НАУ]] зробимо ще FAQ-форму або з допомогою //Гугл Форм// або //Відстежувача Проблем// у //Фрідкамп//. 
 * Впорядкування Front Panel Layout
-** Домівка з лого ФК і НАУПРОФ = НАУПРОСТІР
-** Реєстраційна форма до НАУПРОСТІР
-** Форма для запитань щодо роботи системи
+** [[Домівка з лого ФК і НАУПРОФ = НАУПРОСТІР|https://protw.github.io/prosteer]]
+** [[Реєстраційна форма Freedcamp НАУ]]
+** [[Вирішення проблем з G Suite і Freedcamp]]
 ** Посилання на FAQ (вікі), питання (проблеми), обговорення разом з коротким описом навігації по цьому ресурсі
-** Форма для лайків
+** [[Під'єднання Твітера для поширення і лайків|Під'єднання Twitter і Tiddlywiki]] - не завершено
 
 !! Посилання
 

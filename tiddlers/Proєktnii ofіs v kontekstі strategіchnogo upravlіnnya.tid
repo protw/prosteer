@@ -1,11 +1,11 @@
 caption: Стратегічне управління
 created: 20200125205553045
-modified: 20200209090059639
+modified: 20200209154106010
 order: 010
 parent: Додаткові матеріали
 tags: 
 title: Проєктний офіс в контексті стратегічного управління
 
-<$list filter="[parent[Проєктний офіс в контексті стратегічного управління]sort[order]]">
+<$list filter="[parent[Проєктний офіс в контексті стратегічного управління]!has[draft.of]sort[order]]">
 <<details sum:"""<$macrocall $name="transform" case="uppercase" src={{!!title}}/>""" src:{{!!text}} status:"open">>
 </$list>

@@ -420,7 +420,11 @@ Error message and password prompt
 
 <li>Огляд функцій</li>
 
+<li>Організація команди</li>
+
 <li>Основні стартові точки</li>
+
+<li>Отримати консультаційну допомогу</li>
 
 <li>Передня панель</li>
 
@@ -429,6 +433,8 @@ Error message and password prompt
 <li>Під'єднання Twitter і Tiddlywiki</li>
 
 <li>Поєднання функціонального і проєктного управління</li>
+
+<li>Поради, як вести проєкт</li>
 
 <li>Права доступу</li>
 
@@ -10232,7 +10238,7 @@ viewBox=&quot;0 0 16909 16909&quot;
 <div .tc-site-title="before {" color="silver;" content="&quot;TW &lt;&lt;version&gt;&gt;&quot;;" created="20180906042308596" creator="Mohammad" font-size="13px;" margin-top="-1.9em;" modified="20200121134530309" modifier="Mohammad" position="absolute;" tags="kookma" title="$:/plugins/kookma/utility/stylesheet/tw-version" type="application/x-tiddler" revision="0" bag="default">
 <pre></pre>
 </div>
-<div created="20181010162537613" creator="Mohammad" description="Toggle field handling in view mode" list-after="$:/core/ui/ViewTemplate/tags" modified="20200209102856596" modifier="Mohammad" tags="" title="$:/plugins/kookma/utility/viewtemplate/view-fields" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20181010162537613" creator="Mohammad" description="Toggle field handling in view mode" list-after="$:/core/ui/ViewTemplate/tags" modified="20200209165244379" modifier="Mohammad" tags="" title="$:/plugins/kookma/utility/viewtemplate/view-fields" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>\define lingo-base() $:/language/EditTemplate/
 \define config-title()
 $:/config/EditTemplateFields/Visibility/$(currentField)$
@@ -11134,7 +11140,7 @@ Things you may want to do:
 : Для збереження та обміну паролями у команді.
 &lt;/div&gt;</pre>
 </div>
-<div caption="Компоненти середовища" created="20200109183854433" modified="20200125174942764" order="015" parent="Доповідь" title="Компоненти ефективного проєктного середовище" revision="0" bag="default">
+<div caption="Компоненти середовища" created="20200109183854433" modified="20200209185337433" order="015" parent="Доповідь" title="Компоненти ефективного проєктного середовище" revision="0" bag="default">
 <pre>\define card(i,c) &lt;&lt;image-card &quot;img/$i$.svg&quot; title:&quot;$c$&quot; width:15% pos:&quot;top&quot; align:&quot;left&quot;&gt;&gt;
 &lt;style&gt; .h5 {font-size:10.8pt;} &lt;/style&gt;
 
@@ -11257,6 +11263,30 @@ Things you may want to do:
 
 &lt;/div&gt;</pre>
 </div>
+<div created="20200209143001962" modified="20200209143130625" order="010" parent="Як почати" tags="" title="Організація команди" revision="0" bag="default">
+<pre>Починаємо з організації проєктної групи - Команди. В ієрархії структури даних саме Команда займає найвищу сходинку. Навіть якщо ви починаєте наодинці, все одно це непогана ідея започаткувати Команду. 
+ 
+Для цього треба заповнити [[реєстраційну форму користувача НАУПРОСТІР|Реєстраційна форма Freedcamp НАУ]]. Перед цим ознайомтесь з [[порядком заповнення реєстраційної форми|Реєстрація на платформі Freedcamp НАУ]]. Порядок дуже простий, але варто заздалегідь приготувати все необхідне для заповнення, щоб пройти процедуру миттєво без зупинок.
+
+&lt;&lt;alert-warning &quot;Лідер команди заповнює форму першим. Під час заповнення реєстраційної форми він/вона у полі //Роль в команді// ставить відмітку //Лідер//. Саме за результатом його/її заповнення утворюється команда і вже решта членів команди під час свого заповнення зазначають створену команду як таку, до якої вони належать.&quot;&gt;&gt;
+
+За результатом нетривалого розгляду командою підтримки НАУПРОСТІР користувач отримує спочатку повідомлення з //G Suite// НАУ про власну реєстрацію на домені е-пошти &lt;&lt;mono &quot;@stud.nau.edu.ua&quot;&gt;&gt; і запрошення, що користувач має прийняти (погодитись) для можливості подальшої роботи з //G Suite// НАУ. Під час першого входження до //G Suite// користувачеві буде запропоновано змінити пароль. Сисадміну //G Suite// НАУ новий пароль невідомий. 
+
+Згодом користувач отримує окремо інше повідомлення про реєстрацію (запрошення) від &lt;&lt;mono &quot;nauprof.freedcamp.com&quot;&gt;&gt;, що користувач також має прийняти (погодитись) для можливості подальшої роботи в НАУПРОСТІР. Пароль, утворений користувачем у &lt;&lt;mono &quot;nauprof.freedcamp.com&quot;&gt;&gt;, сисадміну НАУПРОСТІР невідомий. 
+
+Одразу після прийняття запрошення до НАУПРОСТІР користувачеві необхідно увійти до &lt;&lt;mono &quot;nauprof.freedcamp.com&quot;&gt;&gt;, зайти до свого профілю (див. [[Передня панель]], //блок 0// на малюнку) і провести такі налаштування користувача:
+
+* ''Аватар'': завантажити власний унікальний аватар (це може бути ваше фото або будь-що для полегшеня вашої ідентифікації членами команди, партнерами і адмінами.
+* ''Ім'я'': визначити ваше __коротке (одно слово) унікальне ім'я (нік) латиною__.
+* ''Пароль'': Змініть пароль і запам'ятайте його в надійному місці.
+* ''Часовий пояс'': пересвідчитись, що пояс встановлено на __+2__ (наприклад, &lt;&lt;mono &quot;UTC+2:00 Athens, Helsinki, Istanbul&quot;&gt;&gt;)
+* ''Мова'': __Ukrainian__
+* ''Перший робочий день'': __понеділок__
+* ''Робочий тиждень'': __Понеділок-П'ятниця__
+
+Після цього аналогічну процедуру повторюють решта членів цієї команди, але з тією різницею, що під час заповнення реєстраційної форми вони у полі //Роль в команді// ставлять відмітку //Учасник//.
+</pre>
+</div>
 <div caption="Старт" created="20200209093553061" list-before="$:/core/ui/SideBar/Open" modified="20200209113848462" tags="$:/tags/SideBar" title="Основні стартові точки" revision="0" bag="default">
 <pre>&lt;style&gt;
   .btn-lg{
@@ -11293,6 +11323,21 @@ Things you may want to do:
     &lt;&lt;doc-svg &quot;img/tools&quot;&gt;&gt; &amp;nbsp;''FAQ''
 &lt;/$link&gt;
 </pre>
+</div>
+<div caption="Допомога" created="20200209152155642" modified="20200209174816373" order="020" parent="Як почати" title="Отримати консультаційну допомогу" revision="0" bag="default">
+<pre>Питання, що виникають під час роботи у середовищі НАУПРОСТІР, перш за все варто вирішувати у довідниках власне виробників: //Google// і //Freedcamp//.
+
+У випадку G Suite ситуація дещо простіша, тому що переважна частина сервісів G Suite, це звичайні (для багатьох) онлайн застосунки //Google// типу //Документи//, //Таблиці//, //Gmail// та інші. Найбільше нових речей, що потребують вивчення і засвоєння звалюються перш за все на адмінів. Але, на щастя, переважна частина користувачів не є адмінами. Тому користувачам //G Suite// можна не перенапружуватись і спокійно продовжувати використовувати це середовище на базі власного досвіду роботи зі стандартними застосунками //Google//.
+
+У свою чергу, Freedcamp надає детальний і структурований вступний набір відео і текстових матеріалів, зокрема:
+
+* //База знань// за адресою https://nauprof.freedcamp.com/help і 
+* //Блог// за адресою https://blog.freedcamp.com/.
+
+Зрозуміло, що життя багатше за будь-які передбачувані інструкції. Для практичних командою підтримки &lt;&lt;mono nauprof.freedcamp.com&gt;&gt; передбачені:
+
+* [[форма запиту для звернення користувачів НАУПРОСТІР|Питання від користувачів]] з питаннями, що потребують вирішення; доступ до цієї форми наданий зареєстрованим користувачам НАУПРОСТІР;
+* згодом результати накопиченого досвіду, включно з відповідями на запити користувачів, будуть узагальнені у розділі [[Питання від користувачів]] (типу FAQ).</pre>
 </div>
 <div created="20200123064804545" modified="20200209114057888" order="040" parent="Доповідь" title="Передня панель" revision="0" bag="default">
 <pre>\define num(n) [img width=24px [img/num-$n$.svg]]
@@ -11384,6 +11429,21 @@ Things you may want to do:
 Типове поєднання проєктного і функціонального менеджменту досягається, зокрема, матричною структурою організації управління. 
 
 &lt;$macrocall $name=&quot;image-basic&quot; img=&quot;img/project-office-and-strategic-planning-3.svg&quot; width=&quot;75%&quot; align=&quot;center&quot;/&gt;
+</pre>
+</div>
+<div caption="Як вести проєкт" created="20200209152850170" modified="20200209185135879" order="030" parent="Як почати" title="Поради, як вести проєкт" revision="0" bag="default">
+<pre>загальні поради як вести проєкт
+
+; Чітко визначити мету і цілі проєкту
+: Цілі мають бути оцінюванні та/або вимірюванні на предмет їхнього виконання. Розробіть план досягнення поставлених цілей. Визначте проміжні цілі та/або показники виконання.
+; Чітко плануйте ресурси проєкту
+: До ресурсу проєкту відносять різноманітні ресурси: людські, інтелектуальні (ПІВ), фінансові, матеріальні, виробничі, нерухомість тощо. Розподіліть потребу в ресурсах за завданнями. В результаті ви зможете оцінити вартість або інші матеріальні показники витрат за проєктом.
+; Чітко формулюйте завдання
+: Кожне окреме завдання має бути чітко сформульоване: осяжний (облікований) результат, що на вході (початкові матеріали, умови тощо), обов'язково відповідальний виконавець (бажано один) і термін виконання, як і кому передаються результати завдання. Якщо завдання занадто велике та складне розбийте його на простіші осяжніші частини.
+; Комунікація
+: Добийтесь ясної індивідуальної і командної мотивації, чіткої двонаправленої комунікації в команді. Проштовхуйте завдання, зміни у них до своїх партнерів по команді. Підводьте спільно проміжні підсумки.
+; Контроль виконання
+: Регулярно відмічайте статус виконання завдань, занотовуйте результати виконання в тілі завдання та у коментарях. Формуйте узагальнені показники і відслідковуйте по них прогрес виконання проєкту.
 </pre>
 </div>
 <div created="20200122114138619" modified="20200126082130489" order="035" parent="Доповідь" tags="" title="Права доступу" revision="0" bag="default">
@@ -11686,8 +11746,8 @@ Things you may want to do:
 &lt;/center&gt;&lt;/a&gt;
 &quot;&quot;&quot;&gt;&gt;</pre>
 </div>
-<div caption="Стратегічне управління" created="20200125205553045" modified="20200209090059639" order="010" parent="Додаткові матеріали" tags="" title="Проєктний офіс в контексті стратегічного управління" revision="0" bag="default">
-<pre>&lt;$list filter=&quot;[parent[Проєктний офіс в контексті стратегічного управління]sort[order]]&quot;&gt;
+<div caption="Стратегічне управління" created="20200125205553045" modified="20200209154106010" order="010" parent="Додаткові матеріали" tags="" title="Проєктний офіс в контексті стратегічного управління" revision="0" bag="default">
+<pre>&lt;$list filter=&quot;[parent[Проєктний офіс в контексті стратегічного управління]!has[draft.of]sort[order]]&quot;&gt;
 &lt;&lt;details sum:&quot;&quot;&quot;&lt;$macrocall $name=&quot;transform&quot; case=&quot;uppercase&quot; src={{!!title}}/&gt;&quot;&quot;&quot; src:{{!!text}} status:&quot;open&quot;&gt;&gt;
 &lt;/$list&gt;
 </pre>
@@ -12021,17 +12081,17 @@ Things you may want to do:
 |^Тип керівництва |^статусний (начальник) |^лідерський |
 |^Мотивація співробітників як основний фактор успіху |^слабка залежність |^значна залежність |</pre>
 </div>
-<div created="20200111215357334" modified="20200126140218112" order="020" parent="Доповідь" title="Що таке Freedcamp" revision="0" bag="default">
+<div created="20200111215357334" modified="20200209154121166" order="020" parent="Доповідь" title="Що таке Freedcamp" revision="0" bag="default">
 <pre>&lt;&lt;details sum:&quot;ПРИЗНАЧЕННЯ&quot; status:&quot;open&quot; src:&quot;
 //Freedcamp// – це сучасна багатофункціональна веб-платформа ([[SaaS|https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BD%D0%B5_%D0%B7%D0%B0%D0%B1%D0%B5%D0%B7%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%BD%D1%8F_%D1%8F%D0%BA_%D0%BF%D0%BE%D1%81%D0%BB%D1%83%D0%B3%D0%B0]]) для спільного ефективного управління багатьма командами численними завданнями і проєктами.
 &quot;&gt;&gt;
 
-&lt;$list filter=&quot;[parent[Що таке Freedcamp]sort[order]]&quot;&gt;
+&lt;$list filter=&quot;[parent[Що таке Freedcamp]!has[draft.of]sort[order]]&quot;&gt;
 &lt;&lt;details sum:&quot;&quot;&quot;&lt;$macrocall $name=&quot;transform&quot; case=&quot;uppercase&quot; src={{!!title}}/&gt;&quot;&quot;&quot; src:{{!!text}} status:&quot;closed&quot;&gt;&gt;
 &lt;/$list&gt;
 </pre>
 </div>
-<div created="20200109211859624" modified="20200125094642454" order="010" parent="Доповідь" title="Що таке проєкт" revision="0" bag="default">
+<div created="20200109211859624" modified="20200209185259426" order="010" parent="Доповідь" title="Що таке проєкт" revision="0" bag="default">
 <pre>\define bullet2(sign,color) &lt;div style=&quot;width:50px;font-size:50pt;&quot;&gt;&lt;&lt;doc-svg img/$sign$.svg $color$&gt;&gt;&lt;/div&gt;
 
 Розпочнімо із з'ясування власне ключового терміну - `проєкт`:
@@ -12065,18 +12125,16 @@ Things you may want to do:
 &quot;&gt;&gt;
 </pre>
 </div>
-<div created="20200209091820878" modified="20200209092214818" order="070" parent="Доповідь" tags="" title="Як почати" revision="0" bag="default">
-<pre>* як організувати свою проєктну групу чи проєкт, 
-* де отримати консультаційну допомогу, 
-* загальні поради як вести проєкт
-** чітко встановіть ресурси проєкту, 
-** обліковані проміжні і кінцеві цілі, 
-** завдання чітко сформульовані, з виконавцем і датою виконання, 
-** добийтесь чіткої комунікації в команді, 
-** відмічайте статус виконання завдань, 
-** занотовуйте результати виконання в тілі завдання та у коментарях, 
-** проштовхуйте завдання та зміни у них до своїх партнерів по команді, 
-** відслідковуйте прогрес виконання проєкту
+<div created="20200209091820878" modified="20200209154209294" order="070" parent="Доповідь" tags="" title="Як почати" revision="0" bag="default">
+<pre>&lt;!--
+&lt;$macrocall $name=&quot;details&quot; sum=&quot;ОРГАНІЗАЦІЯ КОМАНДИ&quot; status=&quot;open&quot; src=&quot;&quot;&quot;{{Організація команди}}&quot;&quot;&quot;/&gt;
+&lt;$macrocall $name=&quot;details&quot; sum=&quot;ДЕ ОТРИМАТИ КОНСУЛЬТАЦІЙНУ ДОПОМОГУ&quot; status=&quot;open&quot; src=&quot;&quot;&quot;{{Де отримати консультаційну допомогу}}&quot;&quot;&quot;/&gt;
+&lt;$macrocall $name=&quot;details&quot; sum=&quot;ПОРАДИ, ЯК ВЕСТИ ПРОЄКТ&quot; status=&quot;open&quot; src=&quot;&quot;&quot;{{Поради, як вести проєкт}}&quot;&quot;&quot;/&gt;
+--&gt;
+&lt;$list filter=&quot;[parent[Як почати]!has[draft.of]sort[order]]&quot;&gt;
+&lt;&lt;details sum:&quot;&quot;&quot;&lt;$macrocall $name=&quot;transform&quot; case=&quot;uppercase&quot; src={{!!title}}/&gt;&quot;&quot;&quot; src:{{!!text}} status:&quot;open&quot;&gt;&gt;
+&lt;/$list&gt;
+
 </pre>
 </div>
 

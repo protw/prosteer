@@ -1,8 +1,8 @@
 caption: Реєстрація у НАУПРОСТІР
 created: 20200115141909620
-modified: 20200125181923274
-order: 095
-parent: Доповідь
+modified: 20200209084819035
+order: 010
+parent: Реєстрація і отримання допомоги в НАУПРОСТІР
 title: Реєстрація на платформі Freedcamp НАУ
 
 <style> td {min-width:150px;}</style>

@@ -1,39 +1,39 @@
 created: 20170104195303693
-modified: 20200208225928548
+modified: 20200209113731464
 tags: 
 title: $:/boa/subtitle
 type: text/vnd.tiddlywiki
 
 \define div-img(image) <div style="margin:4px 4px; text-align:center;float:left;">[img height=28px [$image$]]</div>
 
-\define res_link_out(link, tooltip, image)
+\define res-link-out(link, tooltip, image)
 <a href="$link$" title="$tooltip$" target="_blank"><$macrocall $name="div-img" image="$image$"/></a>
 \end
 
-\define res_link_outside(img)
-  <$macrocall $name="res_link_out" link={{$img$!!web-link}} tooltip={{$img$!!caption}} image="$img$"/>
+\define res-link-outside(img)
+  <$macrocall $name="res-link-out" link={{$img$!!web-link}} tooltip={{$img$!!caption}} image="$img$"/>
 \end
 
 \define feedback-link(wiki-github, wiki-name, image)
-  <$macrocall $name="res_link_out" link="$wiki-github$/issues/new" tooltip="Feedback on the '$wiki-name$' project via Github" image="$image$"/>
+  <$macrocall $name="res-link-out" link="$wiki-github$/issues/new" tooltip="Feedback on the '$wiki-name$' project via Github" image="$image$"/>
 \end
 
-\define res_link_in(link, tooltip, image)
-  <$link to="$link$" tooltip="$tooltip$"><$macrocall $name="div-img" image="$image$"/></$link>
+\define res-link-in(to, tooltip, img)
+  <$link to="$to$" tooltip="$tooltip$"><$macrocall $name="div-img" image="$img$"/></$link>
 \end
 
-\define res_link_inside(img)
-  <$macrocall $name="res_link_in" link={{$img$!!web-link}} tooltip={{$img$!!caption}} image="$img$"/>
+\define res-link-inside(img)
+  <$macrocall $name="res-link-in" to={{$img$!!web-link}} tooltip={{$img$!!caption}} img="$img$"/>
 \end
 
 <div style="clear:both;"/>
 
-<<res_link_out "https://protw.github.io" "ProTW Publishing central site" "$:/boa/img/protw-logo.svg">>
+<<res-link-out "https://protw.github.io" "ProTW Publishing central site" "$:/boa/img/protw-logo.svg">>
 <$macrocall $name="feedback-link" wiki-github={{$:/boa/logo!!wiki-github}} wiki-name={{$:/boa/logo!!wiki-name}} image="$:/boa/img/github-logo.svg"/>
-<<res_link_inside "img/registration.svg">>
-<<res_link_inside "img/issue-tracker.svg">>
-<!--
-<<res_link_outside "img/springer-logo.svg">>
-<<res_link_outside "img/audacity-logo.svg">>
--->
+<<res-link-in "Таблиця змісту" "Таблиця змісту" "img/Доповідь.svg">>
+<<res-link-inside "img/registration.svg">>
+<<res-link-inside "img/issue-tracker.svg">>
+<<res-link-in "Питання від користувачів" "Відповіді на найчастіші запитання користувачів" "img/tools.svg">>
+
+
 <div style="clear:both;"/>

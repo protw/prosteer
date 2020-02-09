@@ -1,0 +1,41 @@
+caption: Старт
+created: 20200209093553061
+list-before: $:/core/ui/SideBar/Open
+modified: 20200209113848462
+tags: $:/tags/SideBar
+title: Основні стартові точки
+
+<style>
+  .btn-lg{
+    padding: 0.5rem 1rem;
+    margin: 0.15rem 0.1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+  }
+</style>
+
+<$link
+  overrideClass="btn btn-info btn-lg"
+  to="Таблиця змісту"
+  tooltip="Таблиця змісту">
+    <<doc-svg "img/Доповідь">> &nbsp;''Зміст''
+</$link>
+<$link 
+  overrideClass="btn btn-primary btn-lg"
+  to="Реєстраційна форма Freedcamp НАУ"
+  tooltip="Реєстраційна форма Freedcamp НАУ">
+    <<doc-svg "img/registration">> &nbsp;''Реєстрація''
+</$link>
+<$link
+  overrideClass="btn btn-danger btn-lg"
+  to="Вирішення проблем з G Suite і Freedcamp"
+  tooltip="Вирішення проблем з G Suite і Freedcamp">
+    <<doc-svg "img/issue-tracker">> &nbsp;''Проблеми''
+</$link>
+<$link
+  overrideClass="btn btn-warning btn-lg"
+  to="Питання від користувачів"
+  tooltip="Відповіді на найчастіші запитання користувачів">
+    <<doc-svg "img/tools">> &nbsp;''FAQ''
+</$link>

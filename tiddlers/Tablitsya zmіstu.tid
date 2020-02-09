@@ -1,0 +1,12 @@
+caption: Зміст
+created: 20200209082414434
+modified: 20200209091135149
+order: 150
+parent: Доповідь
+tags: 
+title: Таблиця змісту
+
+!! ''ЗМІСТ''
+<div class="sh-multicol3">
+<<tocP "Доповідь" "sort[order]">>
+</div>

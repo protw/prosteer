@@ -1,7 +1,7 @@
 caption: Старт
 created: 20200209093553061
 list-before: $:/core/ui/SideBar/Open
-modified: 20200209113848462
+modified: 20200211202411911
 tags: $:/tags/SideBar
 title: Основні стартові точки
 
@@ -9,8 +9,8 @@ title: Основні стартові точки
   .btn-lg{
     padding: 0.5rem 1rem;
     margin: 0.15rem 0.1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
+//    font-size: 1.25rem;
+//    line-height: 1.5;
     border-radius: 0.3rem;
   }
 </style>

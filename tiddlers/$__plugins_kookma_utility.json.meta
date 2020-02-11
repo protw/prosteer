@@ -3,10 +3,10 @@ core-version: >=5.1.19
 created: 20190930044030716
 description: Utility
 list: readme license history
-modified: 20191209105716263
+modified: 20200210144501691
 plugin-type: plugin
 source: https://github.com/kookma/TW-Utility
 tags: 
 title: $:/plugins/kookma/utility
 type: application/json
-version: 1.6.0
+version: 1.7.3

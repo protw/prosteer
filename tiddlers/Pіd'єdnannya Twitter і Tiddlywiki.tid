@@ -1,12 +1,12 @@
 caption: Twitter і Tiddlywiki
 created: 20200205165627895
-modified: 20200209090450412
+modified: 20200211181118553
 order: 015
 parent: Додаткові матеріали
 tags: 
 title: Під'єднання Twitter і Tiddlywiki
 
-<style> td {max-width:700px;} </style>
+<style> td {max-width:750px;} </style>
 
 <<details sum:"ФУНКЦІОНАЛ ТВІТТЕРУ" status:"open" src:"
 Функціонал Твіттеру, потенційно корисний для офісу, включає:

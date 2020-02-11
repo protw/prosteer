@@ -1,12 +1,12 @@
-caption: Компоненти середовища
+caption: Складові середовища
 created: 20200109183854433
-modified: 20200209185337433
+modified: 20200211180750353
 order: 015
 parent: Доповідь
 title: Компоненти ефективного проєктного середовище
 
-\define card(i,c) <<image-card "img/$i$.svg" title:"$c$" width:15% pos:"top" align:"left">>
-<style> .h5 {font-size:10.8pt;} </style>
+\define card(i,c) <<image-card "img/$i$.svg" title:"$c$" width:16.4% pos:"top" align:"left">>
+<style> .h5 {font-size:9pt;font-weight:bold;} </style>
 
 <<details sum:"ВИБІР ПРОЄКТНОГО СЕРЕДОВИЩА" status:"open" src:"
 

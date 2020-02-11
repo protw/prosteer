@@ -1,5 +1,5 @@
 created: 20200109211859624
-modified: 20200209185259426
+modified: 20200211195059343
 order: 010
 parent: Доповідь
 revision: 0
@@ -34,5 +34,5 @@ title: Що таке проєкт
 
 <<details sum:"ЩО ТАКЕ ПРОЄКТНИЙ ПІДХІД (КОНЦЕПТУАЛЬНО)" status:"closed" src:"
 |table-borderless|k
-| <$macrocall $name=bullet2 sign=medal color=gold/> |універсальний спосіб розвитку (особистості, команди, <br/>спільноти) в мінливих умовах соціуму; | | <$macrocall $name=bullet2 sign=upward-trend-outline color=brown/> |базовий інструмент управління <br/>змінами. |
+| <$macrocall $name=bullet2 sign=medal color=gold/> |універсальний спосіб розвитку (особистості, команди, спільноти) в мінливих умовах соціуму; | <$macrocall $name=bullet2 sign=upward-trend-outline color=brown/> |базовий інструмент управління змінами. |
 ">>

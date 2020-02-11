@@ -1,17 +1,12 @@
 created: 20200209091820878
-modified: 20200209154209294
+modified: 20200211200049357
 order: 070
 parent: Доповідь
 revision: 0
 tags: 
 title: Як почати
 
-<!--
-<$macrocall $name="details" sum="ОРГАНІЗАЦІЯ КОМАНДИ" status="open" src="""{{Організація команди}}"""/>
-<$macrocall $name="details" sum="ДЕ ОТРИМАТИ КОНСУЛЬТАЦІЙНУ ДОПОМОГУ" status="open" src="""{{Де отримати консультаційну допомогу}}"""/>
-<$macrocall $name="details" sum="ПОРАДИ, ЯК ВЕСТИ ПРОЄКТ" status="open" src="""{{Поради, як вести проєкт}}"""/>
--->
 <$list filter="[parent[Як почати]!has[draft.of]sort[order]]">
-<<details sum:"""<$macrocall $name="transform" case="uppercase" src={{!!title}}/>""" src:{{!!text}} status:"open">>
+<<details sum:"""<$macrocall $name="transform" case="uppercase" src={{!!title}}/>""" src:{{!!text}} status:"closed">>
 </$list>
 

@@ -1,12 +1,12 @@
 caption: Старт
 created: 20200209093553061
 list-before: $:/core/ui/SideBar/Open
-modified: 20200214115517205
+modified: 20200214121511062
 tags: $:/tags/SideBar
 title: Основні стартові точки
 
 <style>
-  .btn { margin: 0.15rem 0.1rem; }
+    .btn { margin: 0.15rem 0.1rem; }
 </style>
 
 <$link

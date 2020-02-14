@@ -3,10 +3,10 @@ core-version: >=5.1.21
 created: 20190901192926346
 description: Shiraz 2
 list: readme history license
-modified: 20200205185420311
+modified: 20200209201118390
 plugin-type: plugin
 source: https://github.com/kookma/Shiraz
 tags: 
 title: $:/plugins/kookma/shiraz
 type: application/json
-version: 2.0.15
+version: 2.0.16

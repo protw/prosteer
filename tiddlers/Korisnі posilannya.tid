@@ -1,5 +1,5 @@
 created: 20200208195815144
-modified: 20200209090529208
+modified: 20200219081446909
 order: 020
 parent: Додаткові матеріали
 tags: 
@@ -10,7 +10,7 @@ title: Корисні посилання
   <$set name="useful-text" tiddler=<<currentTiddler>> field="caption">
   <$set name="useful-link" tiddler=<<currentTiddler>> field="web-link">
         <a href=<<useful-link>> target="_blank">
-            <$macrocall $name="image-card" img=<<currentTiddler>> align="left" width="200px" title=<<useful-name>> footer=<<useful-text>>/>
+            <$macrocall $name="image-card" img=<<currentTiddler>> align="left" width="180px" title=<<useful-name>> footer=<<useful-text>>/>
         </a>
     </$set>
     </$set>

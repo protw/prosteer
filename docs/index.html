@@ -12068,7 +12068,7 @@ Things you may want to do:
 &lt;/$list&gt;
 </pre>
 </div>
-<div created="20200109211859624" modified="20200211195059343" order="010" parent="Доповідь" title="Що таке проєкт" revision="0" bag="default">
+<div created="20200109211859624" modified="20200323133811065" order="010" parent="Доповідь" title="Що таке проєкт" revision="0" bag="default">
 <pre>\define bullet2(sign,color) &lt;div style=&quot;width:50px;font-size:50pt;&quot;&gt;&lt;&lt;doc-svg img/$sign$.svg $color$&gt;&gt;&lt;/div&gt;
 
 Розпочнімо із з'ясування власне ключового терміну - `проєкт`:
@@ -12079,27 +12079,27 @@ Things you may want to do:
 &lt;&lt;details sum:&quot;СЕМАНТИКА&quot; status:&quot;closed&quot; src:&quot;
 : `design` vs `draft` vs `project`&quot;&gt;&gt;
 
-&lt;&lt;details sum:&quot;ФУНКЦІОНАЛЬНЕ ВИЗНАЧЕННЯ&quot; status:&quot;closed&quot; src:&quot;
+&lt;$macrocall $name=details sum=&quot;ФУНКЦІОНАЛЬНЕ ВИЗНАЧЕННЯ&quot; status=&quot;closed&quot; src=&quot;
 |table-borderless|k
-|діяльність у будь-якій сфері, що: |&lt;|&lt;|&lt;|&lt;|
-| &lt;$macrocall $name=bullet2 sign=hourglass-half color=orange/&gt; |має встановлені часові рамки - початок і закінчення або інші критерії виконання; | | &lt;$macrocall $name=bullet2 sign=money color=orange/&gt; |має визначене цільове фінансування або інше матеріально-ресурсне забезпечення; |
-| &lt;$macrocall $name=bullet2 sign=sitemap color=blue/&gt; |спланована у низку пов'язаних між собою завдань (етапів, фаз) і | | &lt;$macrocall $name=bullet2 sign=bulb-money-outline color=brown/&gt; |має на меті отримання нового (унікального, інноваційного) продукту, послуги, іншого результату. |
+|Проєкт (//project//) це діяльність у будь-якій сфері, що: |&lt;|&lt;|&lt;|&lt;|
+| &lt;&lt;bullet2 sign:hourglass-half color:orange&gt;&gt; |має встановлені часові рамки - початок і закінчення або інші критерії виконання; | | &lt;&lt;bullet2 sign:money color:orange&gt;&gt; |має визначене цільове фінансування або інше матеріально-ресурсне забезпечення; |
+| &lt;&lt;bullet2 sign:sitemap color:blue&gt;&gt; |спланована у низку пов'язаних між собою завдань (етапів, фаз) і | | &lt;&lt;bullet2 sign:bulb-money-outline color:brown&gt;&gt; |має на меті отримання нового (унікального, інноваційного) продукту, послуги, іншого результату. |
 
 ; Не плутати
 : з окремим завданням, сталим виробництвом, іншими простими та/або регулярними діями.
-&quot;&gt;&gt;
+&quot;/&gt;
 
-&lt;&lt;details sum:&quot;ОБМЕЖЕННЯ&quot; status:&quot;closed&quot; src:&quot;
+&lt;$macrocall $name=details sum=&quot;ОБМЕЖЕННЯ&quot; status=&quot;closed&quot; src=&quot;
 |table-borderless|k
-| &lt;$macrocall $name=bullet2 sign=text-width color=red/&gt; |''в часі'' - один проєкт це не постійне (стале) заняття, але проєктний підхід може стати постійним інструментом; | | &lt;$macrocall $name=bullet2 sign=exclamation-triangle color=red/&gt; |''є ризики'' - проєкт може бути неуспішним, але негативний досвід (особливо власний) є неоціненим надбанням у подальшому розвитку; |
+| &lt;&lt;bullet2 sign:text-width color:red&gt;&gt; |''в часі'' - один проєкт це не постійне (стале) заняття, але проєктний підхід може стати постійним інструментом; | | &lt;&lt;bullet2 sign:exclamation-triangle color:red&gt;&gt; |''є ризики'' - проєкт може бути неуспішним, але негативний досвід (особливо власний) є неоціненим надбанням у подальшому розвитку; |
 | |||||
-| &lt;$macrocall $name=bullet2 sign=balance-scale color=red/&gt; |''є потреба'' у стабільному середовищі (соціальному, фінансовому, економічному тощо); але водночас збалансоване сполучення двох протилежних підходів - проєктного (динамічного) і функціонального (ієрархічного, сталого) в підсумку дає найбільший ефект. |&lt;|&lt;|&lt;|
-&quot;&gt;&gt;
+| &lt;&lt;bullet2 sign:balance-scale color:red&gt;&gt; |''є потреба'' у стабільному середовищі (соціальному, фінансовому, економічному тощо); але водночас збалансоване сполучення двох протилежних підходів - проєктного (динамічного) і функціонального (ієрархічного, сталого) в підсумку дає найбільший ефект. |&lt;|&lt;|&lt;|
+&quot;/&gt;
 
-&lt;&lt;details sum:&quot;ЩО ТАКЕ ПРОЄКТНИЙ ПІДХІД (КОНЦЕПТУАЛЬНО)&quot; status:&quot;closed&quot; src:&quot;
+&lt;$macrocall $name=details sum=&quot;ЩО ТАКЕ ПРОЄКТНИЙ ПІДХІД (КОНЦЕПТУАЛЬНО)&quot; status=&quot;closed&quot; src=&quot;
 |table-borderless|k
-| &lt;$macrocall $name=bullet2 sign=medal color=gold/&gt; |універсальний спосіб розвитку (особистості, команди, спільноти) в мінливих умовах соціуму; | &lt;$macrocall $name=bullet2 sign=upward-trend-outline color=brown/&gt; |базовий інструмент управління змінами. |
-&quot;&gt;&gt;
+| &lt;&lt;bullet2 sign:medal color:gold&gt;&gt; |універсальний спосіб розвитку (особистості, команди, спільноти) в мінливих умовах соціуму; | &lt;&lt;bullet2 sign:upward-trend-outline color:brown&gt;&gt; |базовий інструмент управління змінами. |
+&quot;/&gt;
 </pre>
 </div>
 <div caption="Як вести проєкт" created="20200209152850170" modified="20200211202922771" order="030" parent="Як почати" title="Як вести проєкт" revision="0" bag="default">
